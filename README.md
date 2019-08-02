@@ -18,6 +18,8 @@ sudo apt update &&
 sudo apt upgrade &&
 exit
 
+"iso usb sdc.sh" is an partial GUI to create bootable usb stick, it write to SDC !!!
+
 Debian 10 junk remover. Sh script to remove junk or bloatware softwares.
 
 Just run .sh file and remove bloatwares.
