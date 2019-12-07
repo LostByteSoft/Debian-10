@@ -1,6 +1,4 @@
-# sudo apt install vlc &&
-# sudo apt install mkvtoolnix-gui &&
-# sudo apt install puddletag &&
+echo "Remove junk audio"
 sudo apt remove totem -y &&
 sudo apt remove brasero -y &&
 sudo apt remove cheese -y &&

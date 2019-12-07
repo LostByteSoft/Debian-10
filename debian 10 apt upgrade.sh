@@ -1,5 +1,6 @@
 echo "sudo apt upgrade"
-sudo apt upgrade &&
+sudo apt upgrade
+sleep 10
 exit
 
 # sudo gedit /etc/apt/sources.list

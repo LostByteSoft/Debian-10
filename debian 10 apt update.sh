@@ -1,12 +1,12 @@
 echo "sudo apt update"
-sudo apt update &&
+sudo apt update
+sleep 10
 exit
+
 
 # sudo gedit /etc/apt/sources.list
 
-
 # add to sources.list
-
 
 #buster
 deb http://deb.debian.org/debian buster main contrib non-free

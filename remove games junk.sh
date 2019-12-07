@@ -1,5 +1,4 @@
-echo "removes all games from debian 10"
-echo "by LostBytesSoft"
+echo "Remove junk games"
 sudo apt remove gnome-robots -y &&
 sudo apt remove gnome-chess -y &&
 sudo apt remove aisleriot -y &&

@@ -1,3 +1,4 @@
+echo "Remove junk graphics"
 sudo apt remove eog -y &&
 sudo apt remove shotwell -y &&
 sudo apt remove inkscape -y &&

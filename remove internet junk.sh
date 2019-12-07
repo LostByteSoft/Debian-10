@@ -1,3 +1,4 @@
+echo "Remove junk internet"
 sudo apt-get remove pidgin -y &&
 sudo apt-get remove thunderbird -y &&
 sudo apt-get remove hexchat -y &&
