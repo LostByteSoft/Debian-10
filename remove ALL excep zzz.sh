@@ -13,6 +13,7 @@ sudo apt-get remove mlterm-common -y &&
 sudo apt-get remove mlterm -y &&
 sudo apt-get remove mlterm-tiny -y &&
 sudo apt-get remove xiterm+thai -y &&
+sudo apt-get remove malcontent -y &&
 echo "Remove junk audio"
 sudo apt remove totem -y &&
 sudo apt remove brasero -y &&
@@ -40,6 +41,7 @@ sudo apt remove swell-foop -y &&
 sudo apt remove iagno -y &&
 echo "Remove junk graphics"
 sudo apt remove eog -y &&
+sudo apt remove simple-scan -y &&
 sudo apt remove shotwell -y &&
 sudo apt remove inkscape -y &&
 sudo apt remove imagemagick -y &&
