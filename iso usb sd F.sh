@@ -4,7 +4,7 @@ echo ---------------------------------------------------------------------------
 echo "Write an *.iso to an usb key"
 echo "By LostByteSoft"
 echo "Version 2021-02-15"
-echo "Write to sdb"
+echo "Write to sdf"
 echo -----------------------------------------------------------------------------
 
 echo "Select filename using dialog"
@@ -32,7 +32,7 @@ VAR="$FILE"
 echo var = "${VAR}"
 echo "After sudo passord wait until it finishes..."
 
-sudo dd if="$FILE" of=/dev/sdb
+sudo dd if="$FILE" of=/dev/sdf
 
 echo -----------------------------------------------------------------------------
 sleep 3		#A little wait here to wait the writing process
