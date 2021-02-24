@@ -3,39 +3,40 @@ echo --- Start of file ---
 echo -----------------------------------------------------------------------------
 echo "Write an *.iso to an usb key"
 echo "By LostByteSoft"
-echo "Version 2021-02-15"
-echo "Write to sdc"
+echo "https://github.com/LostByteSoft"
+echo "Version 2021-02-21"
+echo "Select and Write ISO to usb key : sdc"
 echo -----------------------------------------------------------------------------
 
 echo "Select filename using dialog"
-FILE="$(zenity --file-selection --filename=$HOME/$USER --file-filter="*.iso" --title="Select a ISO File")"
-echo "Your file is $FILE"
+FILE="$(zenity --file-selection --filename=$HOME/$USER --file-filter="*.iso" --title="Select a ISO File to write on SDC")"
 
 echo -----------------------------------------------------------------------------
 
 if test -z "$FILE"
-
 	then
 	echo "\$FILE is empty and now exit."
 	sleep 1
 	echo Press ENTER key to exit !
 	read name
 	exit
-
 	else
 	echo "\$FILE is NOT empty. Ready to write."
 fi
 
 echo -----------------------------------------------------------------------------
 
-VAR="$FILE"
-echo var = "${VAR}"
-echo "After sudo passord wait until it finishes..."
+echo Your selected file is :
+echo "$FILE"
 
+echo -----------------------------------------------------------------------------
+
+echo "After sudo passord wait until it finishes..."
 sudo dd if="$FILE" of=/dev/sdc
 
 echo -----------------------------------------------------------------------------
-sleep 3		#A little wait here to wait the writing process
+sleep 10		#A little wait here to wait the writing process
+echo Writing process finish without errors... Ready to eject !
 echo Press ENTER key to exit !
 read name
 exit
