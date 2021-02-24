@@ -2,19 +2,12 @@ echo --- start of file ---
 #!/bin/bash
 printf '\033[8;50;175t'		# will resize the window
 echo -----------------------------------------------------------------------------
-echo "Auto updater for Debian 11"
+echo "sudo apt update"
 echo "By LostBytesSoft"
 echo "Version 2021-02-23"
 sleep 1
 echo -----------------------------------------------------------------------------
-echo "Upadte files"
-sudo apt update -y
-sudo apt upgrade -y
-sleep 1
-echo -----------------------------------------------------------------------------
-echo "Autoremove no longer used files"
-sudo apt-get autoremove -y
-sleep 1
+sudo apt update
 echo -----------------------------------------------------------------------------
 
 	echo Press ENTER key to exit !
