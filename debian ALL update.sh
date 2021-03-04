@@ -5,7 +5,6 @@ echo ---------------------------------------------------------------------------
 echo "Auto updater for Debian 11"
 echo "By LostBytesSoft"
 echo "Version 2021-02-23"
-sleep 1
 echo -----------------------------------------------------------------------------
 echo "Upadte files"
 sudo apt update -y
@@ -22,7 +21,7 @@ echo ---------------------------------------------------------------------------
 	exit
 
 echo -----------------------------------------------------------------------------
-
+exit
 echo --- End of bash ---
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE

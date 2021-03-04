@@ -5,9 +5,9 @@ echo ---------------------------------------------------------------------------
 echo "Autoremove no longer used files"
 echo "By LostBytesSoft"
 echo "Version 2021-02-23"
-sleep 1
 echo -----------------------------------------------------------------------------
 sudo apt-get autoremove -y
+sleep 1
 echo -----------------------------------------------------------------------------
 
 	echo Press ENTER key to exit !
