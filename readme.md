@@ -15,10 +15,37 @@ Just run *.sh file and remove bloatwares.
 
 --------------------------------------------------------------------
 
--Version 2021-12-15
+Files
 
-LostByteSoft no copyright or copyleft
+apt-get auto remove.sh
+	-auto removes orphelin unused files.
 
---- End of readme ---
+remove ALL excep zzz.sh
+	-script to remove some bloatwares includes with Debian.
+
+search and create.sh
+	-Search name and create a list of finding files.
 
 --------------------------------------------------------------------
+
+JUST DO WHAT YOU WANT WITH THE PUBLIC LICENSE
+
+Version 3.1415926532 (January 2022)
+
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+   
+Everyone is permitted to copy and distribute verbatim or modified copies of
+this license document.
+
+As is customary and in compliance with current global and interplanetary
+regulations, the author of these pages disclaims all liability for the
+consequences of the advice given here, in particular in the event of partial
+or total destruction of the material, Loss of rights to the manufacturer
+warranty, electrocution, drowning, divorce, civil war, the effects of radiation
+due to atomic fission, unexpected tax recalls or encounters with
+extraterrestrial beings elsewhere.
+
+LostByteSoft no copyright or copyleft we are in the center.
+
+--------------------------------------------------------------------
+# --- End of file ---

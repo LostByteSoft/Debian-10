@@ -12,11 +12,33 @@ echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
 	echo 2022-01-30_Sunday_06:11:10
 echo -------------------------========================-------------------------
-echo "Autoremove no longer used files"
-echo "By LostBytesSoft"
-echo "Version 2021-04-09"
-echo -------------------------========================-------------------------
-sudo apt-get autoremove -y
+echo "LostbyteSoft"
+echo "Version 2021-12-26"
+echo ------
+sleep 0.25
+
+echo Which program do you search ?
+echo Will create a list in file installed.txt
+echo "Don't forget an * somewhere !"
+read a
+
+apt -qq list $a --installed > installed.txt
+
+	echo --- Research done ---
+	echo
+
+if [ -s installed.txt ]
+then
+        echo SOME MATCH FOUND, LOOK FOR installed.txt and corrected.txt
+	cat installed.txt | awk -F '\\/' '{print $1""}'>corrected.txt
+        echo
+        cat installed.txt
+        echo
+else
+        echo NO FILES FOUND WITH THIS NAME, TRY SOMETHING ELSE.
+        echo
+fi
+
 echo -------------------------========================-------------------------
 ## Software lead out.
 	echo "Finish..."
