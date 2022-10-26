@@ -10,7 +10,7 @@ echo -------------------------========================-------------------------
 	echo "Current time : $now"
 	echo
 	echo Version compiled on : Also serves as a version
-	echo 2022-01-30_Sunday_06:11:10
+	echo 2022-10-07_Sunday_06:11:10
 echo -------------------------========================-------------------------
 echo "Remove ALL junk and unused files"
 echo "By LostBytesSoft"
@@ -62,11 +62,11 @@ sudo apt-get remove eog -y &&
 sudo apt-get remove simple-scan -y &&
 sudo apt-get remove shotwell -y &&
 sudo apt-get remove inkscape -y &&
-echo apt-get remove imagemagick -y &&
-echo apt-get remove imagemagick-6-common -y &&
-echo sudo apt-get remove imagemagick-6.q16 -y &&
-echo sudo apt-get remove libmagickcore-6.q16-6 -y &&
-echo sudo apt-get remove libmagickwand-6.q16-6 -y &&
+#echo apt-get remove imagemagick -y &&
+#echo apt-get remove imagemagick-6-common -y &&
+#echo apt-get remove imagemagick-6.q16 -y &&
+#echo apt-get remove libmagickcore-6.q16-6 -y &&
+#echo apt-get remove libmagickwand-6.q16-6 -y &&
 echo -------------------------========================-------------------------
 echo "Remove junk internet"
 sudo apt-get remove pidgin -y &&
@@ -92,16 +92,16 @@ sudo apt-get remove uim-xim -y &&
 sudo apt-get remove im-config -y &&
 sudo apt-get remove mozc-data -y &&
 sudo apt-get remove mozc-utils-gui -y &&
-sudo apt-get remove ibus -y &&		# problem in terminal
-sudo apt-get remove ibus-clutter -y &&	# problem in terminal
+#sudo apt-get remove ibus -y &&		## problem in terminal
+#sudo apt-get remove ibus-clutter -y &&	## problem in terminal
 sudo apt-get remove fcitx -y &&
 sudo apt-get remove fcitx5 -y &&
 sudo apt-get remove fcitx-bin -y &&
 sudo apt-get remove fcitx-data -y &&
 sudo apt-get remove fcitx-module-dbus -y &&
-sudo apt-get remove libfcitx-utils0 -y &&
+#sudo apt-get remove libfcitx-utils0 -y &&
 sudo apt-get remove fcitx-config-common -y &&
-sudo apt-get remove blueman -y &&
+#sudo apt-get remove blueman -y &&	## bluetooth do not remove
 sudo apt-get remove hunspell -y &&
 sudo apt-get remove aspell -y &&
 sudo apt-get remove eject -y &&

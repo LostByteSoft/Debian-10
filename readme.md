@@ -13,18 +13,28 @@ Debian 10 junk remover. Sh script to remove junk or bloatware softwares.
 
 Just run *.sh file and remove bloatwares.
 
+The file to use is remove " ALL excep zzz.sh "
+	-I update this file if i detect issues.
+
+
+Others remove files are for YOUR purpose if you really want to remove theses programs.
+
 --------------------------------------------------------------------
 
-Files
-
-apt-get auto remove.sh
-	-auto removes orphelin unused files.
+Files:
 
 remove ALL excep zzz.sh
 	-script to remove some bloatwares includes with Debian.
 
+apt-get auto remove.sh
+	-auto removes orphelin unused files.
+
 search and create.sh
 	-Search name and create a list of finding files.
+
+Others files
+	-remove zzz gimp.sh
+	-remove zzz rhythmbox.sh
 
 --------------------------------------------------------------------
 
