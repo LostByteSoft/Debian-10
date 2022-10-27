@@ -3,9 +3,9 @@
 Debian bash update and utilities
 --------------------------------------------------------------------
 
-Debian 11 have some junk software installed by default.
+Debian 9 10 11 (and probably 12) have some junk software installed by default.
 
-I use Debian 11 free cinnamon x64.
+I use Debian 11.5 non-free cinnamon x64.
 
 Debian is easy to use and really stable.
 
@@ -23,8 +23,8 @@ Others remove files are for YOUR purpose if you really want to remove theses pro
 
 Files:
 
-remove ALL excep zzz.sh
-	-script to remove some bloatwares includes with Debian.
+remove ALL deb 11.5 excep zzz.sh
+	-script to remove some bloatwares includes with Debian 11.5.
 
 apt-get auto remove.sh
 	-auto removes orphelin unused files.
@@ -35,6 +35,7 @@ search and create.sh
 Others files
 	-remove zzz gimp.sh
 	-remove zzz rhythmbox.sh
+	-...
 
 --------------------------------------------------------------------
 
