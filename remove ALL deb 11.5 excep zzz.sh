@@ -28,12 +28,13 @@ echo -------------------------========================-------------------------
 
 echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
-	echo 2022-10-27_Thursday_12:52:20
+	echo 2022-11-13_12:52:20
 	echo
 	## Software name, what is this, version, informations.
 	echo "Remove ALL junk and unused files"
 	echo "By LostBytesSoft"
-	echo "Optimized For Debian Cinnamon 11.2"
+	echo "Optimized For : Debian non free Cinnamon 11.2 x64"
+	echo
 	echo "This version : debian-live-11.5.0-amd64-cinnamon+nonfree.iso"
 	echo
 	echo "Informations : (EULA at the end of file, open in text.)"
