@@ -1,10 +1,7 @@
 #!/bin/bash
 #!/usr/bin/ffmpeg
 ## -----===== Start of bash =====-----
-	#printf '\033[8;40;80t'		# will resize the window, if needed.
-	#printf '\033[8;40;125t'	# will resize the window, if needed.
 	printf '\033[8;40;150t'	# will resize the window, if needed.
-	#printf '\033[8;50;200t'	# will resize the window, if needed.
 	sleep 0.50
 	
 echo -------------------------========================-------------------------
@@ -23,6 +20,7 @@ echo -------------------------========================-------------------------
 	debug=0		# test debug
 	error=0		# test error
 	part=0		# don't change this value
+	noquit=1
 	
 	echo autoquit=$autoquit debug=$debug error=$error part=$part
 
@@ -177,35 +175,17 @@ echo -------------------------========================-------------------------
 echo -------------------------========================-------------------------
 ## Exit, wait or auto-quit.
 
-if [ "$autoquit" -eq "1" ]
+if [ "$noquit" -eq "1" ]
 then
 		echo "Script will auto quit in 1 seconds."
 		echo
 		echo "${blue}██████████████████████████████ Finish Now ████████████████████████████████${reset}"
 		echo
 		sleep 1
-	else
-	{
-	if [ $(( SECONDS - start )) -gt 120 ]
-		then
-			echo "Script takes more than 120 seconds to complete."
-			echo
-			echo "${yellow}████████████████████████████████ Finish ██████████████████████████████████${reset}"
-			echo
-			echo -------------------------========================-------------------------
-			read -n 1 -s -r -p "Press ENTER key to exit !"
-		else
-			echo "Script takes less than 120 seconds to complete."
-			echo
-			echo "${green}████████████████████████████████ Finish ██████████████████████████████████${reset}"
-			echo
-			echo -------------------------========================-------------------------
-			echo "Auto-quit in 10 sec. (You can press X)"
-			sleep 10
 		fi
-	}
-	fi
 
+	echo Press ENTER key to exit !
+	read name
 	exit
 
 ## -----===== End of bash =====-----
