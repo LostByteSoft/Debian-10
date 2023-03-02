@@ -1,2 +1,2 @@
-sudo apt remove firefox-esr -y &&
+sudo apt remove firefox-esr -y
 exit
