@@ -1,4 +1,9 @@
-# Debian 12
+# Debian 12 is here...
+
+Updated software to Debian 12 !
+
+Old versions are archived.
+
 
 Debian remove junk
 --------------------------------------------------------------------
@@ -24,9 +29,30 @@ Others remove files are for YOUR purpose if you really want to remove theses pro
 
 --------------------------------------------------------------------
 
-Files:
+#Files: /subfolder/Debian_12
 
-remove ALL deb 12.0 excep zzz.sh
+emove ALL deb 11.5 excep zzz.sh
+
+	-script to remove some bloatwares includes with Debian 11.5.
+
+
+apt-get auto remove.sh
+
+	-auto removes orphelin unused files.
+
+
+Others files
+
+	-remove zzz evince.sh
+
+	-remove zzz rhythmbox.sh
+
+	-...
+
+
+#Files: /subfolder/Debian_11.5
+
+remove ALL deb 11.5 excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 11.5.
 
