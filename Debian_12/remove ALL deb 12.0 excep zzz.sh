@@ -109,12 +109,6 @@ echo "-------------------------===== Section $part =====------------------------
 	sudo apt-get remove eog -y
 	sudo apt-get remove simple-scan -y
 	sudo apt-get remove shotwell -y
-	# imagemagick can be removed
-	#echo apt-get remove imagemagick-6-common -y	# alot of my bash gui use imagemagick
-	#echo apt-get remove libmagickcore-6.q16-6 -y
-	#echo apt-get remove libmagickwand-6.q16-6 -y
-	sudo apt-get remove gimp-help-sv -y
-	sudo apt-get remove gimp-help-common -y
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
@@ -172,14 +166,18 @@ part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo Finish removing applications.
 
+	echo
 	echo "${yellow}	████████████████ REMOVE APP FINISH ████████████████ ${reset}"
+	echo
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo autoremove unused associated files.
 	sudo apt-get autoremove -y
 	
+	echo
 	echo  "${green}	████████████████ ALL OK / ALL REMOVED ████████████████ ${reset}"
+	echo
 
 echo -------------------------========================-------------------------
 ## Software lead-out.
