@@ -31,9 +31,9 @@ Others remove files are for YOUR purpose if you really want to remove theses pro
 
 #Files: /subfolder/Debian_12
 
-emove ALL deb 11.5 excep zzz.sh
+emove ALL deb 12.0 excep zzz.sh
 
-	-script to remove some bloatwares includes with Debian 11.5.
+	-script to remove some bloatwares includes with Debian 12
 
 
 apt-get auto remove.sh
@@ -54,7 +54,7 @@ Others files
 
 remove ALL deb 11.5 excep zzz.sh
 
-	-script to remove some bloatwares includes with Debian 11.5.
+	-script to remove some bloatwares includes with Debian 11.5
 
 
 apt-get auto remove.sh
@@ -102,3 +102,4 @@ Others files
 
 --------------------------------------------------------------------
 # --- End of file ---
+
