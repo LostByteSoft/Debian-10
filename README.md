@@ -8,9 +8,9 @@ Old versions are archived.
 Debian remove junk
 --------------------------------------------------------------------
 
-Debian 12 have some junk software installed by default.
+Debian have some junk software installed by default.
 
-I use Debian 12.0 non-free cinnamon x64.
+I use Debian 12.1 cinnamon x64.
 
 
 Debian is easy to use and really stable.
@@ -19,7 +19,7 @@ Debian 12 junk remover. Sh script to remove junk or bloatware softwares.
 
 Just run *.sh file and remove bloatwares.
 
-The file to use is remove " remove ALL deb 12.0 excep zzz.sh "
+The file to use is remove " remove ALL deb 12.1 excep zzz.sh "
 
 	-I update this file if i detect issues.
 
@@ -29,16 +29,61 @@ Others remove files are for YOUR purpose if you really want to remove theses pro
 
 --------------------------------------------------------------------
 
-#Files: /subfolder/Debian_12
+	-search and create.sh
+		Search for an installed program.
 
-emove ALL deb 12.0 excep zzz.sh
+#Files: /subfolder/Debian_13.0
+
+remove ALL deb 13.0 excep zzz.sh
+
+	-script to remove some bloatwares includes with Debian 12.1
+
+
+	-apt-get auto remove.sh
+		auto removes orphelin unused files.
+
+
+Others files
+
+	-remove zzz evince.sh
+		Remove evince.
+
+	-remove zzz spelldictionnary.sh
+		A new file to remove spell dictionnary (beta)
+
+	-...
+
+#Files: /subfolder/Debian_12.1
+
+remove ALL deb 12.1 excep zzz.sh
+
+	-script to remove some bloatwares includes with Debian 12.1
+
+
+	-apt-get auto remove.sh
+		auto removes orphelin unused files.
+
+
+Others files
+
+	-remove zzz evince.sh
+		Remove evince.
+
+	-remove zzz rhythmbox.sh
+		Remove rhytmbox
+
+	-...
+
+
+#Files: /subfolder/Debian_12.0
+
+	-remove ALL deb 12.0 excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 12
 
 
-apt-get auto remove.sh
-
-	-auto removes orphelin unused files.
+	-apt-get auto remove.sh
+		auto removes orphelin unused files.
 
 
 Others files
@@ -52,21 +97,22 @@ Others files
 
 #Files: /subfolder/Debian_11.5
 
-remove ALL deb 11.5 excep zzz.sh
+	-remove ALL deb 11.5 excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 11.5
 
 
-apt-get auto remove.sh
-
-	-auto removes orphelin unused files.
+	-apt-get auto remove.sh
+		auto removes orphelin unused files.
 
 
 Others files
 
 	-remove zzz evince.sh
+		Remove evince.
 
 	-remove zzz rhythmbox.sh
+		Remove rhytmbox
 
 	-...
 
