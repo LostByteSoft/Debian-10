@@ -1,8 +1,6 @@
-# Debian 12 is here...
+# Debian 13 is here...
 
-Updated software to Debian 12 !
-
-Old versions are archived.
+Updated software to Debian 13 !
 
 
 Debian remove junk
@@ -10,16 +8,17 @@ Debian remove junk
 
 Debian have some junk software installed by default.
 
-I use Debian 12.1 cinnamon x64.
+I use Debian cinnamon x64.
 
 
 Debian is easy to use and really stable.
 
-Debian 12 junk remover. Sh script to remove junk or bloatware softwares.
+Debian junk remover. Sh script to remove junk or bloatware softwares.
 
 Just run *.sh file and remove bloatwares.
 
-The file to use is remove " remove ALL deb 12.1 excep zzz.sh "
+The file to use is remove " remove ALL deb XX.X excep zzz.sh "
+
 
 	-I update this file if i detect issues.
 
