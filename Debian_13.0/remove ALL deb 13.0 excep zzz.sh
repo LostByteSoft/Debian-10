@@ -150,37 +150,6 @@ echo "Remove junk system"
 	sudo apt-get remove mozc-utils-gui -y
 	#sudo apt-get remove ibus -y		## problem in terminal if removed
 	#sudo apt-get remove ibus-clutter -y	## problem in terminal if removed
-	sudo apt-get remove fcitx5-data -y
-	sudo apt-get remove fcitx-bin -y
-	sudo apt-get remove fcitx-module-dbus -y
-	sudo apt-get remove fcitx-config-common -y
-	sudo dpkg -r --force-depends fcitx-m17n
-	sudo dpkg -r --force-depends fcitx-module-lua
-	sudo dpkg -r --force-depends fcitx-module-quickphrase-editor5
-	sudo dpkg -r --force-depends fcitx-module-x11
-	sudo dpkg -r --force-depends fcitx-modules
-	sudo dpkg -r --force-depends fcitx5-chewing
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-bin
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-data
-	sudo dpkg -r --force-depends fcitx5-chinese-addons
-	sudo dpkg -r --force-depends fcitx5-module-chttrans
-	sudo dpkg -r --force-depends fcitx5-module-cloudpinyin
-	sudo dpkg -r --force-depends fcitx5-module-fullwidth
-	sudo dpkg -r --force-depends fcitx5-module-lua-common
-	sudo dpkg -r --force-depends fcitx5-module-lua
-	sudo dpkg -r --force-depends fcitx5-module-pinyinhelper
-	sudo dpkg -r --force-depends fcitx5-module-punctuation
-	sudo dpkg -r --force-depends fcitx5-pinyin
-	sudo dpkg -r --force-depends fcitx5-table
-	sudo dpkg -r --force-depends libfcitx-config4
-	sudo dpkg -r --force-depends libfcitx-qt5-1
-	sudo dpkg -r --force-depends libfcitx-qt5-data
-	sudo dpkg -r --force-depends libfcitx-utils0
-	sudo dpkg -r --force-depends libfcitx5-qt-data
-	sudo dpkg -r --force-depends libfcitx5-qt1
-	sudo dpkg -r --force-depends libfcitx5config6
-	sudo dpkg -r --force-depends libfcitx5core7
-	sudo dpkg -r --force-depends libfcitx5utils2
 	sudo apt-get remove eject -y
 	sudo apt-get remove vino -y
 	sudo apt-get remove yelp -y
