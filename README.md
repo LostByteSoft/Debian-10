@@ -35,7 +35,7 @@ Others remove files are for YOUR purpose if you really want to remove theses pro
 
 remove ALL deb 13.0 excep zzz.sh
 
-	-script to remove some bloatwares includes with Debian 12.1
+	-script to remove some bloatwares includes with Debian 13.0
 
 
 	-apt-get auto remove.sh
@@ -46,11 +46,20 @@ Others files
 
 	-remove zzz evince.sh
 		Remove evince.
+	
+	-remove zzz firefox-esr
+		Remove Firefox
+	
+	-remove zzz libreoffice
+	
+	-remove zzz rhythmbox
 
 	-remove zzz spelldictionnary.sh
 		A new file to remove spell dictionnary (beta)
 
-	-...
+	-remove zzz fcitx (beta)
+		i have some problems now !
+
 
 #Files: /subfolder/Debian_12.1
 
