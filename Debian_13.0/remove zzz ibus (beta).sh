@@ -47,45 +47,11 @@ echo -------------------------========================-------------------------
 	echo 2023-03-29_Wednesday_06:54:00
 	echo
 echo -------------------------========================-------------------------
-echo "Remove FCITX"
-	echo
-	sudo apt-get remove fcitx5-data -y
-	sudo apt-get remove fcitx-bin -y
-	sudo apt-get remove fcitx-module-dbus -y
-	sudo apt-get remove fcitx-config-common -y
-	sudo apt-get remove fcitx-data -y
-	sudo apt-get remove fcitx-frontend-all -y
-	sudo apt-get remove fcitx-ui-classic -y
-	sudo apt-get remove libfcitx-core0 -y
-	sudo apt-get remove libfcitx-gclient1 -y
-	sudo dpkg -r --force-depends fcitx-m17n
-	sudo dpkg -r --force-depends fcitx-module-lua
-	sudo dpkg -r --force-depends fcitx-module-quickphrase-editor5
-	sudo dpkg -r --force-depends fcitx-module-x11
-	sudo dpkg -r --force-depends fcitx-modules
-	sudo dpkg -r --force-depends fcitx5-chewing
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-bin
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-data
-	sudo dpkg -r --force-depends fcitx5-chinese-addons
-	sudo dpkg -r --force-depends fcitx5-module-chttrans
-	sudo dpkg -r --force-depends fcitx5-module-cloudpinyin
-	sudo dpkg -r --force-depends fcitx5-module-fullwidth
-	sudo dpkg -r --force-depends fcitx5-module-lua-common
-	sudo dpkg -r --force-depends fcitx5-module-lua
-	sudo dpkg -r --force-depends fcitx5-module-pinyinhelper
-	sudo dpkg -r --force-depends fcitx5-module-punctuation
-	sudo dpkg -r --force-depends fcitx5-pinyin
-	sudo dpkg -r --force-depends fcitx5-table
-	sudo dpkg -r --force-depends libfcitx-config4
-	sudo dpkg -r --force-depends libfcitx-qt5-1
-	sudo dpkg -r --force-depends libfcitx-qt5-data
-	sudo dpkg -r --force-depends libfcitx-utils0
-	sudo dpkg -r --force-depends libfcitx5-qt-data
-	sudo dpkg -r --force-depends libfcitx5-qt1
-	sudo dpkg -r --force-depends libfcitx5config6
-	sudo dpkg -r --force-depends libfcitx5core7
-	sudo dpkg -r --force-depends libfcitx5utils2
 
+	sudo apt-get remove ibus -y
+	sudo apt-get remove ibus-hangul -y
+	sudo apt-get autoremove -y
+	
 echo -------------------------========================-------------------------
 ## Software lead out
 	echo "Finish... with numbers of actions : $part"

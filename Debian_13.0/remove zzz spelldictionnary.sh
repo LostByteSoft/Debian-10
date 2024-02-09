@@ -54,10 +54,11 @@ echo "Remove dictionnary"
 	## sudo dpkg -r --force-depends ispell			## Does not want to remove
 	sudo apt-get remove hunspell -y
 	sudo apt-get remove aspell -y
-	sudo apt-get remove hyphen-de
-	sudo apt-get remove hyphen-hr
-	sudo apt-get remove hyphen-hu
-	sudo apt-get remove hyphen-lt
+	sudo apt-get remove hyphen-de -y
+	sudo apt-get remove hyphen-hr -y
+	sudo apt-get remove hyphen-hu -y
+	sudo apt-get remove hyphen-lt -y
+	##sudo dpkg -r --force-depends libhunspell-1.7-0	## Does not want to remove
 	sudo dpkg -r --force-depends hunspell-be
 	sudo dpkg -r --force-depends hunspell-ar
 	sudo dpkg -r --force-depends hunspell-be
