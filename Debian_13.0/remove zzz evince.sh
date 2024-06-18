@@ -1,12 +1,18 @@
 #!/bin/bash
 #!/usr/bin/ffmpeg
+
 	start=$SECONDS
 	now=$(date +"%Y-%m-%d_%A_%H:%M:%S")
 
 echo -------------------------===== Start of bash ====-------------------------
 	#printf '\033[8;40;90t'		# will resize the window, if needed.
-	printf '\033[8;50;125t'		# will resize the window, if needed.
+	printf '\033[8;40;110t'		# will resize the window, if needed.
 	#printf '\033[8;40;130t'	# will resize the window, if needed.
+	
+	echo
+	echo
+	me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
+	echo "Running : $me"
 	
 	red=`tput setaf 1`
 	green=`tput setaf 2`
@@ -14,15 +20,17 @@ echo -------------------------===== Start of bash ====-------------------------
 	blue=`tput setaf 12`
 	reset=`tput sgr0`
 
-	## All variables 0 or 1
-	autoquit=0	# autoquit anyway to script takes LESS than 2 min to complete. (0 or 1, change in conjoncture noquit=0)
+	## General purposes variables. Watch before program to specific variables.
+	## All variables must be 0 or 1
 	debug=0		# test debug. (0 or 1 debug mode)
 	error=0		# test error. (0 or 1 make error)
-	part=0		# don't change this value. (0)
-	noquit=1	# No quit after all operations. (0 or 1 noquit)
-	wol=1		# Wake on lan skip. (0 or 1 skip)
+	primeerror=0
+	noquit=1
+
+	## Auto-generated variables.
 	random=$(shuf -i 4096-131072 -n 1)	# Used for temp folders. A big number hard to guess for security reasons.
-	## random=$RANDOM	# Normal random number.
+	random2=$RANDOM
+	part=0					# don't change this value. (0)
 	
 	echo
 	echo "Software lead-in. LostByteSoft ; https://github.com/LostByteSoft"
@@ -33,8 +41,10 @@ echo -------------------------===== Start of bash ====-------------------------
 	echo "Current time : $now"
 	echo
 	echo "Common variables, you can changes theses variables as you wish to test."
-	echo "Debug data : autoquit=$autoquit debug=$debug error=$error part=$part noquit=$noquit wol=$wol random=$random"
 	echo
+	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 primeerror=$primeerror"
+	echo
+
 echo -------------------------========================-------------------------
 	echo
 	echo  "${green}	████████████████     ALL OK / ACTIVE      ████████████████ ${reset}"
@@ -51,7 +61,10 @@ echo "Evince is a Document (PostScript, PDF) viewer."
 sudo apt-get remove evince-common -y
 sudo apt-get remove evince -y
 echo -------------------------========================-------------------------
-## Software lead out
+echo "Software lead out."
+	echo
+	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 primeerror=$primeerror"
+	echo
 	echo "Finish... with numbers of actions : $part"
 	echo "This script take $(( SECONDS - start )) seconds to complete."
 	date=$(date -d@$(( SECONDS - start )) -u +%H:%M:%S)
@@ -59,12 +72,60 @@ echo -------------------------========================-------------------------
 	now=$(date +"%Y-%m-%d_%A_%I:%M:%S")
 	echo "Current time : $now"
 	echo
+	echo "$date $now $me" >>/dev/shm/logs.txt
+
 echo -------------------------===== End of Bash ======-------------------------
+## Exit, wait or auto-quit.
+
+	if [ "$primeerror" -ge "1" ]; then
+		echo
+		echo "	${red}████████████████████████████████████████████${reset}"
+		echo "	${red}██                                        ██${reset}"
+		echo "	${red}██           ERROR ERROR ERROR            ██${reset}"
+		echo "	${red}██                                        ██${reset}"
+		echo "	${red}████████████████████████████████████████████${reset}"
+		echo
+		echo "Numbers of error(s) : $primeerror"
+		echo
+		functionsmallbar
+		echo
+		read -n 1 -s -r -p "Press ENTER key to Continue !"
+		echo
+	else
+		echo
+		echo "		${green}████████████████████████████████████████${reset}	${blue}████████████████████████████████████████${reset}"
+		echo "		${green}██                                    ██${reset}	${blue}██                                    ██${reset}"
+		echo "		${green}██         NO errors detected.        ██${reset}	${blue}██       Time needed : $date       ██${reset}"
+		echo "		${green}██                                    ██${reset}	${blue}██                                    ██${reset}"
+		echo "		${green}████████████████████████████████████████${reset}	${blue}████████████████████████████████████████${reset}"
+		echo
+	fi
+
+	if [ "$noquit" -eq "1" ]; then
 		echo
 		echo "${blue}	█████████████████ NO exit activated ███████████████████${reset}"
 		echo
 		read -n 1 -s -r -p "Press ENTER key to exit !"
+		echo
 		exit
+		fi
+
+	if [ "$debug" -eq "1" ]; then
+		debug
+		echo "${blue}		█████ DEBUG WAIT | Program finish. █████${reset}"
+		echo
+		read -n 1 -s -r -p "Press ENTER key to continue !"
+		echo
+		fi
+
+	echo
+	echo "${green}	███████████████ Finish, quit in 3 seconds █████████████████${reset}"
+	sleep 0.5
+	echo
+	functionsmallbar
+	echo
+	sleep 1
+	exit
 
 ## -----===== Start of eula =====-----
 
