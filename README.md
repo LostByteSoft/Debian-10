@@ -31,11 +31,11 @@ Others remove files are for YOUR purpose if you really want to remove theses pro
 	-search and create.sh
 		Search for an installed program.
 
-#Files: /subfolder/Debian_13.0
+#Files: /subfolder/Debian_13.X
 
 remove ALL deb 13.0 excep zzz.sh
 
-	-script to remove some bloatwares includes with Debian 13.0
+	-script to remove some bloatwares includes with Debian 13.X
 
 
 	-apt-get auto remove.sh
@@ -61,11 +61,11 @@ Others files
 		i have some problems now !
 
 
-#Files: /subfolder/Debian_12.1
+#Files: /subfolder/Debian_12.X
 
 remove ALL deb 12.1 excep zzz.sh
 
-	-script to remove some bloatwares includes with Debian 12.1
+	-script to remove some bloatwares includes with Debian 12.X
 
 
 	-apt-get auto remove.sh
@@ -83,31 +83,11 @@ Others files
 	-...
 
 
-#Files: /subfolder/Debian_12.0
+#Files: /subfolder/Debian_11.X
 
-	-remove ALL deb 12.0 excep zzz.sh
+	-remove ALL deb 11.X excep zzz.sh
 
-	-script to remove some bloatwares includes with Debian 12
-
-
-	-apt-get auto remove.sh
-		auto removes orphelin unused files.
-
-
-Others files
-
-	-remove zzz evince.sh
-
-	-remove zzz rhythmbox.sh
-
-	-...
-
-
-#Files: /subfolder/Debian_11.5
-
-	-remove ALL deb 11.5 excep zzz.sh
-
-	-script to remove some bloatwares includes with Debian 11.5
+	-script to remove some bloatwares includes with Debian 11.X
 
 
 	-apt-get auto remove.sh
