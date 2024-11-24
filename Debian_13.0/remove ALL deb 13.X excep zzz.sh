@@ -54,54 +54,149 @@ echo -------------------------========================-------------------------
 	echo
 echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
-	echo 2023-03-29_Wednesday_06:54:00
+	echo 2024-11-24-06-22-46_Wednesday_06:22:00
 	echo
 echo -------------------------========================-------------------------
-echo "Remove FCITX"
 	echo
-	sudo apt-get remove fcitx5-data -y
-	sudo apt-get remove fcitx-bin -y
-	sudo apt-get remove fcitx-module-dbus -y
-	sudo apt-get remove fcitx-config-common -y
-	sudo apt-get remove fcitx-data -y
-	sudo dpkg -r --force-depends fcitx-frontend-all -y
-	sudo dpkg -r --force-depends fcitx5-config-qt
-	sudo dpkg -r --force-depends fcitx5-frontend-all
-	sudo dpkg -r --force-depends fcitx5-frontend-gtk3
-	sudo dpkg -r --force-depends fcitx5-frontend-gtk4
-	sudo dpkg -r --force-depends fcitx5-frontend-qt5
-	sudo dpkg -r --force-depends fcitx5-frontend-qt6
-	sudo dpkg -r --force-depends fcitx5-m17n
-	sudo apt-get remove libfcitx-core0 -y
-	sudo apt-get remove libfcitx-gclient1 -y
-	sudo dpkg -r --force-depends fcitx-m17n
-	sudo dpkg -r --force-depends fcitx-module-lua
-	sudo dpkg -r --force-depends fcitx-module-quickphrase-editor5
-	sudo dpkg -r --force-depends fcitx-module-x11
-	sudo dpkg -r --force-depends fcitx-modules
-	sudo dpkg -r --force-depends fcitx5-chewing
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-bin
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-data
-	sudo dpkg -r --force-depends fcitx5-chinese-addons
-	sudo dpkg -r --force-depends fcitx5-module-chttrans
-	sudo dpkg -r --force-depends fcitx5-module-cloudpinyin
-	sudo dpkg -r --force-depends fcitx5-module-fullwidth
-	sudo dpkg -r --force-depends fcitx5-module-lua-common
-	sudo dpkg -r --force-depends fcitx5-module-lua
-	sudo dpkg -r --force-depends fcitx5-module-pinyinhelper
-	sudo dpkg -r --force-depends fcitx5-module-punctuation
-	sudo dpkg -r --force-depends fcitx5-pinyin
-	sudo dpkg -r --force-depends fcitx5-table
-	sudo dpkg -r --force-depends libfcitx-config4
-	sudo dpkg -r --force-depends libfcitx-qt5-1
-	sudo dpkg -r --force-depends libfcitx-qt5-data
-	sudo dpkg -r --force-depends libfcitx-utils0
-	sudo dpkg -r --force-depends libfcitx5-qt-data
-	sudo dpkg -r --force-depends libfcitx5-qt1
-	sudo dpkg -r --force-depends libfcitx5config6
-	sudo dpkg -r --force-depends libfcitx5core7
-	sudo dpkg -r --force-depends libfcitx5utils2
+	echo "Remove ALL junk and unused files"
+	echo "By LostBytesSoft"
+	echo "Optimized For : Debian non free Cinnamon 13.X x64"
+	echo
+	echo "This version : debian-live-testing-amd64-cinnamon.iso"
+	echo
+	echo "Informations : (EULA at the end of file, open in text.)"
+	echo "By LostByteSoft, no copyright or copyleft. https://github.com/LostByteSoft"
+	echo
+	echo "Don't hack paid software, free software exists and does the job better."
+	echo
+echo -------------------------========================-------------------------
+echo Press enter to continue or X to quit.
+	read name
 
+	echo   "${blue}	████████████████ START ████████████████ ${reset}"
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Remove junk accessoires"
+	sudo apt-get remove deja-dup -y
+	sudo apt-get remove goldendict -y
+	sudo apt-get remove gnote -y
+	sudo apt-get remove yelp -y
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Remove junk audio"
+	sudo apt-get remove totem -y
+	sudo apt-get remove brasero -y
+	sudo apt-get remove brasero-common -y
+	sudo apt-get remove cheese -y
+	sudo apt-get remove sound-juicer -y
+	sudo apt-get remove gnome-sound-recorder -y
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Remove junk games"
+	sudo apt-get remove gnome-robots -y
+	sudo apt-get remove gnome-chess -y
+	sudo apt-get remove aisleriot -y
+	sudo apt-get remove five-or-more -y
+	sudo apt-get remove gnome-mahjongg -y
+	sudo apt-get remove tali -y
+	sudo apt-get remove four-in-a-row -y
+	sudo apt-get remove gnome-klotski -y
+	sudo apt-get remove gnome-mines -y
+	sudo apt-get remove gnome-nibbles -y
+	sudo apt-get remove gnome-2048 -y
+	sudo apt-get remove gnome-sudoku -y
+	sudo apt-get remove gnome-taquin -y
+	sudo apt-get remove gnome-tetravex -y
+	sudo apt-get remove hitori -y
+	sudo apt-get remove lightsoff -y
+	sudo apt-get remove quadrapassel -y
+	sudo apt-get remove swell-foop -y
+	sudo apt-get remove iagno -y
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+	echo "Remove junk graphics"
+	sudo apt-get remove eog -y
+	sudo apt-get remove simple-scan -y
+	sudo apt-get remove shotwell -y
+	sudo apt-get remove gimp-help-sv -y
+	sudo apt-get remove gimp-help-common -y
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Remove junk internet"
+	sudo apt-get remove pidgin -y
+	sudo apt-get remove hexchat -y
+	sudo apt-get remove transmission-gtk -y
+	sudo apt-get remove remmina -y
+	sudo apt-get remove deluge -y
+	sudo apt-get remove deluge-common -y
+	sudo apt-get remove deluge-gtk -y
+	sudo apt-get remove thunderbird -y
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Remove junk Office"
+	echo Nothing to remove in Debian 12.0 here.
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Remove junk preferences"
+	sudo apt-get remove anthy -y
+	sudo apt-get remove kasumi -y
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Remove junk system"
+	killall -9 uim
+	sudo apt-get remove uim -y
+	sudo apt-get remove uim-data -y
+	sudo apt-get remove uim-mozc -y
+	sudo apt-get remove uim-xim -y
+	sudo apt-get remove im-config -y
+	sudo apt-get remove mozc-data -y
+	sudo apt-get remove mozc-utils-gui -y
+	#sudo apt-get remove ibus -y		## problem in terminal if removed
+	#sudo apt-get remove ibus-clutter -y	## problem in terminal if removed
+	sudo apt-get remove eject -y
+	sudo apt-get remove vino -y
+	sudo apt-get remove yelp -y
+	sudo apt-get remove yelp-xsl -y
+	sudo apt-get remove id3 -y		## command line id3 tag
+	sudo apt-get remove mdadm -y		## raid software
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Remove junk administration"
+	sudo apt-get remove gnome-software -y
+	sudo apt-get remove xterm -y
+	sudo apt-get remove mlterm-common -y
+	sudo apt-get remove mlterm -y
+	sudo apt-get remove mlterm-tiny -y
+	sudo apt-get remove xiterm+thai -y
+	sudo apt-get remove malcontent -y
+	sudo apt-get remove gnome-logs -y
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo Finish removing applications.
+
+	echo
+	echo "${yellow}	████████████████ REMOVE APP FINISH ████████████████ ${reset}"
+	echo
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo autoremove unused associated files.
+	sudo apt-get autoremove -y
+	
+	echo
+	echo  "${green}	████████████████ ALL OK / ALL REMOVED ████████████████ ${reset}"
+	echo
+
+echo -------------------------========================-------------------------
 echo "Software lead out."
 	echo
 	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 primeerror=$primeerror"
