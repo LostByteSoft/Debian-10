@@ -70,13 +70,14 @@ echo -------------------------========================-------------------------
 	echo "Don't hack paid software, free software exists and does the job better."
 	echo
 echo -------------------------========================-------------------------
-echo Press enter to continue or X to quit.
+echo "Press enter to continue or X to quit. Remove all junk ?"
 	read name
 
 	echo   "${blue}	████████████████ START ████████████████ ${reset}"
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+
 echo "Remove junk accessoires"
 	sudo apt-get remove deja-dup -y
 	sudo apt-get remove goldendict -y
@@ -85,6 +86,7 @@ echo "Remove junk accessoires"
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+
 echo "Remove junk audio"
 	sudo apt-get remove totem -y
 	sudo apt-get remove brasero -y
@@ -92,8 +94,10 @@ echo "Remove junk audio"
 	sudo apt-get remove cheese -y
 	sudo apt-get remove sound-juicer -y
 	sudo apt-get remove gnome-sound-recorder -y
+	
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+
 echo "Remove junk games"
 	sudo apt-get remove gnome-robots -y
 	sudo apt-get remove gnome-chess -y
@@ -117,7 +121,8 @@ echo "Remove junk games"
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-	echo "Remove junk graphics"
+
+echo "Remove junk graphics"
 	sudo apt-get remove eog -y
 	sudo apt-get remove simple-scan -y
 	sudo apt-get remove shotwell -y
@@ -126,6 +131,7 @@ echo "-------------------------===== Section $part =====------------------------
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+
 echo "Remove junk internet"
 	sudo apt-get remove pidgin -y
 	sudo apt-get remove hexchat -y
@@ -138,17 +144,20 @@ echo "Remove junk internet"
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+
 echo "Remove junk Office"
-	echo Nothing to remove in Debian 12.0 here.
+	echo Nothing to remove in Debian 13.0 here.
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+
 echo "Remove junk preferences"
 	sudo apt-get remove anthy -y
 	sudo apt-get remove kasumi -y
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+
 echo "Remove junk system"
 	killall -9 uim
 	sudo apt-get remove uim -y
@@ -158,8 +167,6 @@ echo "Remove junk system"
 	sudo apt-get remove im-config -y
 	sudo apt-get remove mozc-data -y
 	sudo apt-get remove mozc-utils-gui -y
-	#sudo apt-get remove ibus -y		## problem in terminal if removed
-	#sudo apt-get remove ibus-clutter -y	## problem in terminal if removed
 	sudo apt-get remove eject -y
 	sudo apt-get remove vino -y
 	sudo apt-get remove yelp -y
@@ -169,6 +176,7 @@ echo "Remove junk system"
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+
 echo "Remove junk administration"
 	sudo apt-get remove gnome-software -y
 	sudo apt-get remove xterm -y
@@ -181,6 +189,7 @@ echo "Remove junk administration"
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+
 echo Finish removing applications.
 
 	echo
@@ -190,7 +199,7 @@ echo Finish removing applications.
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo autoremove unused associated files.
-	sudo apt-get autoremove -y
+	echo "Run apt-get autoremove -y to remove associated files"
 	
 	echo
 	echo  "${green}	████████████████ ALL OK / ALL REMOVED ████████████████ ${reset}"

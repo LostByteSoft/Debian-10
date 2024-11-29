@@ -59,7 +59,7 @@ echo -------------------------========================-------------------------
 echo -------------------------========================-------------------------
 echo "https://techpiezo.com/linux/remove-a-package-without-removing-its-dependencies-in-ubuntu/"
 
-## For debian 12
+echo "Remove LibreOffice ?"
 
 sudo dpkg -r --force-depends fonts-opensymbol
 sudo dpkg -r --force-depends libreoffice-base-core
@@ -175,23 +175,9 @@ sudo dpkg -r --force-depends libuno-cppuhelpergcc3-3
 sudo dpkg -r --force-depends libuno-purpenvhelpergcc3-3
 sudo dpkg -r --force-depends libuno-sal3
 sudo dpkg -r --force-depends libuno-salhelpergcc3-3
-sudo dpkg -r --force-depends myspell-he
-sudo dpkg -r --force-depends mythes-cs
-sudo dpkg -r --force-depends mythes-de
-sudo dpkg -r --force-depends mythes-de-ch
-sudo dpkg -r --force-depends mythes-fr
-sudo dpkg -r --force-depends mythes-it
-sudo dpkg -r --force-depends mythes-ne
-sudo dpkg -r --force-depends mythes-pl
-sudo dpkg -r --force-depends mythes-ru
-sudo dpkg -r --force-depends mythes-sk
 sudo dpkg -r --force-depends python3-uno
 sudo dpkg -r --force-depends uno-libs-private
 sudo dpkg -r --force-depends ure
-
-echo -------------------------========================-------------------------
-
-sudo apt-get autoremove -y
 
 echo -------------------------========================-------------------------
 echo "Software lead out."

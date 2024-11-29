@@ -58,9 +58,11 @@ echo -------------------------========================-------------------------
 	echo
 echo -------------------------========================-------------------------
 
+echo "Remove ibus ?"
+
 	sudo apt-get remove ibus -y
 	sudo apt-get remove ibus-hangul -y
-	sudo apt-get autoremove -y
+	sudo apt-get remove ibus-clutter -y	## problem in terminal if removed
 	
 echo -------------------------========================-------------------------
 echo "Software lead out."

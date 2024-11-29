@@ -57,9 +57,12 @@ echo -------------------------========================-------------------------
 	echo 2023-03-29_Wednesday_06:54:00
 	echo
 echo -------------------------========================-------------------------
-echo "Evince is a Document (PostScript, PDF) viewer."
-sudo apt-get remove evince-common -y
-sudo apt-get remove evince -y
+
+echo "Evince is a Document (PostScript, PDF) viewer. Remove ?"
+
+	sudo apt-get remove evince-common -y
+	sudo apt-get remove evince -y
+
 echo -------------------------========================-------------------------
 echo "Software lead out."
 	echo

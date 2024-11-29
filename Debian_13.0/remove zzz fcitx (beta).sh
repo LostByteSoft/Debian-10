@@ -57,42 +57,41 @@ echo -------------------------========================-------------------------
 	echo 2023-03-29_Wednesday_06:54:00
 	echo
 echo -------------------------========================-------------------------
-echo "Remove FCITX"
-	echo
-	sudo apt-get remove fcitx5-data -y
-	sudo apt-get remove fcitx-bin -y
-	sudo apt-get remove fcitx-module-dbus -y
-	sudo apt-get remove fcitx-config-common -y
-	sudo apt-get remove fcitx-data -y
-	sudo dpkg -r --force-depends fcitx-frontend-all -y
+
+echo "Remove FCITX ?"
+
+	sudo dpkg -r --force-depends fcitx-bin
+	sudo dpkg -r --force-depends fcitx-frontend-all
+	sudo dpkg -r --force-depends fcitx-m17n
+	sudo dpkg -r --force-depends fcitx-module-dbus
+	sudo dpkg -r --force-depends fcitx-module-lua
+	sudo dpkg -r --force-depends fcitx-module-quickphrase-editor5
+	sudo dpkg -r --force-depends fcitx-module-x11
+	sudo dpkg -r --force-depends fcitx-modules
+	sudo dpkg -r --force-depends fcitx5-chewing
+	sudo dpkg -r --force-depends fcitx5-chinese-addons
+	sudo dpkg -r --force-depends fcitx5-chinese-addons-bin
+	sudo dpkg -r --force-depends fcitx5-chinese-addons-data
 	sudo dpkg -r --force-depends fcitx5-config-qt
+	sudo dpkg -r --force-depends fcitx5-data
 	sudo dpkg -r --force-depends fcitx5-frontend-all
 	sudo dpkg -r --force-depends fcitx5-frontend-gtk3
 	sudo dpkg -r --force-depends fcitx5-frontend-gtk4
 	sudo dpkg -r --force-depends fcitx5-frontend-qt5
 	sudo dpkg -r --force-depends fcitx5-frontend-qt6
 	sudo dpkg -r --force-depends fcitx5-m17n
-	sudo apt-get remove libfcitx-core0 -y
-	sudo apt-get remove libfcitx-gclient1 -y
-	sudo dpkg -r --force-depends fcitx-m17n
-	sudo dpkg -r --force-depends fcitx-module-lua
-	sudo dpkg -r --force-depends fcitx-module-quickphrase-editor5
-	sudo dpkg -r --force-depends fcitx-module-x11
-	sudo dpkg -r --force-depends fcitx-modules
-	sudo dpkg -r --force-depends fcitx5-chewing
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-bin
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-data
-	sudo dpkg -r --force-depends fcitx5-chinese-addons
 	sudo dpkg -r --force-depends fcitx5-module-chttrans
 	sudo dpkg -r --force-depends fcitx5-module-cloudpinyin
 	sudo dpkg -r --force-depends fcitx5-module-fullwidth
-	sudo dpkg -r --force-depends fcitx5-module-lua-common
 	sudo dpkg -r --force-depends fcitx5-module-lua
+	sudo dpkg -r --force-depends fcitx5-module-lua-common
 	sudo dpkg -r --force-depends fcitx5-module-pinyinhelper
 	sudo dpkg -r --force-depends fcitx5-module-punctuation
 	sudo dpkg -r --force-depends fcitx5-pinyin
 	sudo dpkg -r --force-depends fcitx5-table
 	sudo dpkg -r --force-depends libfcitx-config4
+	sudo dpkg -r --force-depends libfcitx-core0
+	sudo dpkg -r --force-depends libfcitx-gclient1
 	sudo dpkg -r --force-depends libfcitx-qt5-1
 	sudo dpkg -r --force-depends libfcitx-qt5-data
 	sudo dpkg -r --force-depends libfcitx-utils0
@@ -101,7 +100,10 @@ echo "Remove FCITX"
 	sudo dpkg -r --force-depends libfcitx5config6
 	sudo dpkg -r --force-depends libfcitx5core7
 	sudo dpkg -r --force-depends libfcitx5utils2
+	sudo dpkg -r --force-depends remove fcitx-config-common
+	sudo dpkg -r --force-depends remove fcitx-data
 
+echo -------------------------========================-------------------------
 echo "Software lead out."
 	echo
 	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 primeerror=$primeerror"

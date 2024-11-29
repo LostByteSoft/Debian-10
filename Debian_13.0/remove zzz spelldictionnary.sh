@@ -59,18 +59,16 @@ echo -------------------------========================-------------------------
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-echo "Remove dictionnary"
-	## sudo dpkg -r --force-depends dictionaries-common	## Does not want to remove
-	## sudo dpkg -r --force-depends ispell			## Does not want to remove
-	sudo apt-get remove hunspell -y
-	sudo apt-get remove aspell -y
-	sudo apt-get remove hyphen-de -y
-	sudo apt-get remove hyphen-hr -y
-	sudo apt-get remove hyphen-hu -y
-	sudo apt-get remove hyphen-lt -y
-	##sudo dpkg -r --force-depends libhunspell-1.7-0	## Does not want to remove
-	sudo dpkg -r --force-depends hunspell-be
+
+echo "Remove dictionnary ?"
+
+	sudo dpkg -r --force-depends aspell
+	sudo dpkg -r --force-depends dictionaries-common	## Does not want to remove
+	sudo dpkg -r --force-depends hspell
+	sudo dpkg -r --force-depends hspell-gui
+	sudo dpkg -r --force-depends hunspell
 	sudo dpkg -r --force-depends hunspell-ar
+	sudo dpkg -r --force-depends hunspell-be
 	sudo dpkg -r --force-depends hunspell-be
 	sudo dpkg -r --force-depends hunspell-bg
 	sudo dpkg -r --force-depends hunspell-bs
@@ -82,12 +80,11 @@ echo "Remove dictionnary"
 	sudo dpkg -r --force-depends hunspell-de-de
 	sudo dpkg -r --force-depends hunspell-el
 	sudo dpkg -r --force-depends hunspell-en-gb
-	## sudo dpkg -r --force-depends hunspell-en-us	## Need at least one language
 	sudo dpkg -r --force-depends hunspell-eu
-	sudo dpkg -r --force-depends hunspell-fr-classical
 	sudo dpkg -r --force-depends hunspell-fr
-	sudo dpkg -r --force-depends hunspell-gl-es
+	sudo dpkg -r --force-depends hunspell-fr-classical
 	sudo dpkg -r --force-depends hunspell-gl
+	sudo dpkg -r --force-depends hunspell-gl-es
 	sudo dpkg -r --force-depends hunspell-gu
 	sudo dpkg -r --force-depends hunspell-hi
 	sudo dpkg -r --force-depends hunspell-hr
@@ -111,49 +108,63 @@ echo "Remove dictionnary"
 	sudo dpkg -r --force-depends hunspell-si
 	sudo dpkg -r --force-depends hunspell-sl
 	sudo dpkg -r --force-depends hunspell-sr
-	sudo dpkg -r --force-depends hunspell-sv-se
 	sudo dpkg -r --force-depends hunspell-sv
+	sudo dpkg -r --force-depends hunspell-sv-se
 	sudo dpkg -r --force-depends hunspell-te
 	sudo dpkg -r --force-depends hunspell-th
 	sudo dpkg -r --force-depends hunspell-vi
-	sudo dpkg -r --force-depends myspell-eo
-	sudo dpkg -r --force-depends myspell-es
-	sudo dpkg -r --force-depends myspell-et
-	sudo dpkg -r --force-depends myspell-fa
-	sudo dpkg -r --force-depends myspell-ga
-	sudo dpkg -r --force-depends myspell-nb
-	sudo dpkg -r --force-depends myspell-nn
-	sudo dpkg -r --force-depends myspell-sk
-	sudo dpkg -r --force-depends myspell-sq
-	sudo dpkg -r --force-depends myspell-uk
-	sudo dpkg -r --force-depends wdanish
-	sudo dpkg -r --force-depends idanish
+	sudo dpkg -r --force-depends hyphen-de
+	sudo dpkg -r --force-depends hyphen-hr
+	sudo dpkg -r --force-depends hyphen-hu
+	sudo dpkg -r --force-depends hyphen-lt
 	sudo dpkg -r --force-depends iamerican
 	sudo dpkg -r --force-depends ibrazilian
 	sudo dpkg -r --force-depends ibritish
 	sudo dpkg -r --force-depends ibulgarian
 	sudo dpkg -r --force-depends icatalan
 	sudo dpkg -r --force-depends idanish
+	sudo dpkg -r --force-depends idanish
 	sudo dpkg -r --force-depends idutch
 	sudo dpkg -r --force-depends ienglish-common
 	sudo dpkg -r --force-depends ifrench-gut
+	sudo dpkg -r --force-depends igerman
 	sudo dpkg -r --force-depends ihungarian
 	sudo dpkg -r --force-depends iitalian
 	sudo dpkg -r --force-depends ilithuanian
-	sudo dpkg -r --force-depends igerman
 	sudo dpkg -r --force-depends ingerman
 	sudo dpkg -r --force-depends inorwegian
 	sudo dpkg -r --force-depends ipolish
 	sudo dpkg -r --force-depends iportuguese
 	sudo dpkg -r --force-depends irussian
-	sudo dpkg -r --force-depends iswiss
 	sudo dpkg -r --force-depends ispanish
-	sudo dpkg -r --force-depends hspell
-	sudo dpkg -r --force-depends hspell-gui
+	sudo dpkg -r --force-depends ispell			## Does not want to remove
+	sudo dpkg -r --force-depends iswiss
+	sudo dpkg -r --force-depends libhunspell-1.7-0		## Does not want to remove
+	sudo dpkg -r --force-depends myspell-eo
+	sudo dpkg -r --force-depends myspell-es
+	sudo dpkg -r --force-depends myspell-et
+	sudo dpkg -r --force-depends myspell-fa
+	sudo dpkg -r --force-depends myspell-ga
+	sudo dpkg -r --force-depends myspell-he
+	sudo dpkg -r --force-depends myspell-nb
+	sudo dpkg -r --force-depends myspell-nn
+	sudo dpkg -r --force-depends myspell-sk
+	sudo dpkg -r --force-depends myspell-sq
+	sudo dpkg -r --force-depends myspell-uk
+	sudo dpkg -r --force-depends mythes-cs
+	sudo dpkg -r --force-depends mythes-de
+	sudo dpkg -r --force-depends mythes-de-ch
+	sudo dpkg -r --force-depends mythes-fr
+	sudo dpkg -r --force-depends mythes-it
+	sudo dpkg -r --force-depends mythes-ne
+	sudo dpkg -r --force-depends mythes-pl
+	sudo dpkg -r --force-depends mythes-ru
+	sudo dpkg -r --force-depends mythes-sk
 	sudo dpkg -r --force-depends wamerican
 	sudo dpkg -r --force-depends wbrazilian
 	sudo dpkg -r --force-depends wbulgarian
 	sudo dpkg -r --force-depends wcatalan
+	sudo dpkg -r --force-depends wdanish
 	sudo dpkg -r --force-depends wdutch
 	sudo dpkg -r --force-depends wfrench
 	sudo dpkg -r --force-depends witalian
@@ -163,6 +174,7 @@ echo "Remove dictionnary"
 	sudo dpkg -r --force-depends wportuguese
 	sudo dpkg -r --force-depends wspanish
 	sudo dpkg -r --force-depends wswedish
+	## sudo dpkg -r --force-depends hunspell-en-us		## Need at least one language
 
 echo -------------------------========================-------------------------
 echo "Software lead out."
