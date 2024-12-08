@@ -1,7 +1,9 @@
 #!/bin/bash
 #!/usr/bin/ffmpeg
 ## -----===== Start of bash =====-----
+	#printf '\033[8;40;75t'		# will resize the window, if needed.
 	printf '\033[8;40;75t'		# will resize the window, if needed.
+	#printf '\033[8;50;200t'	# will resize the window, if needed.
 echo -------------------------========================-------------------------
 ## Software lead in
 	start=$SECONDS
@@ -11,33 +13,12 @@ echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
 	echo 2022-01-30_Sunday_06:11:10
 echo -------------------------========================-------------------------
-echo "LostbyteSoft"
-echo "Version 2021-12-26"
-echo ------
-sleep 0.25
+echo "By LostBytesSoft"
+echo "Version 2021-11-18"
 
-echo Which program do you search ?
-echo Will create a list in file installed.txt
-echo "Don't forget an * somewhere !"
-read a
-
-apt -qq list $a --installed > installed.txt
-
-	echo --- Research done ---
-	echo
-
-if [ -s installed.txt ]
-then
-        echo SOME MATCH FOUND, LOOK FOR installed.txt and corrected.sh
-	cat installed.txt | awk -F '\\/' '{print $1""}'>corrected.sh
-        echo
-        cat installed.txt
-        echo
-else
-        echo NO FILES FOUND WITH THIS NAME, TRY SOMETHING ELSE.
-        echo
-fi
-
+echo "Fix broken install"
+echo -------------------------========================-------------------------
+sudo apt --fix-broken install
 echo -------------------------========================-------------------------
 ## Software lead out.
 	echo "Finish..."
@@ -46,7 +27,6 @@ echo -------------------------========================-------------------------
 	echo "Time needed: $date"
 	now=$(date +"%Y-%m-%d_%A_%I:%M:%S")
 	echo "Current time : $now"
-
 	echo Press ENTER key to exit !
 	read name
 	exit

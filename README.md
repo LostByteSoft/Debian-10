@@ -1,23 +1,27 @@
 # Debian 13 is here...
 
-Updated software to Debian 13 !
+Updated software to Debian 13.X !
 
 
-Debian remove junk
+Debian remove junk.
 --------------------------------------------------------------------
 
 Debian have some junk software installed by default.
 
-I use Debian cinnamon x64.
+I use Debian:
+
+	debian-live-11.11.0-amd64-cinnamon.iso
+	debian-live-12.8.0-amd64-cinnamon.iso
+	debian-live-testing-amd64-cinnamon.iso
 
 
 Debian is easy to use and really stable.
 
 Debian junk remover. Sh script to remove junk or bloatware softwares.
 
-Just run *.sh file and remove bloatwares.
+Just run *.sh file and remove bloatwares automatically.
 
-The file to use is remove " remove ALL deb XX.X excep zzz.sh "
+The file to use is " remove ALL deb 1X.X excep zzz.sh "
 
 
 	-I update this file if i detect issues.
@@ -26,14 +30,28 @@ The file to use is remove " remove ALL deb XX.X excep zzz.sh "
 Others remove files are for YOUR purpose if you really want to remove theses programs.
 
 
+Search for specific files.
 --------------------------------------------------------------------
 
 	-search and create.sh
 		Search for an installed program.
+	
+	Exectue and write anything "ex: vlc". This will give you 2 files.
+		installed.txt
+			-vlc/stable,now 3.0.21-0+deb12u1 amd64 [installed]
+		corrected.sh
+			-vlc
+
+	Add MANUALLY sudo apt-get remove before vlc (and other lines) in the file corrected.sh
+		-Execute file corrected.sh and remove your software.
+
+#Files included in folders.
+
+--------------------------------------------------------------------
 
 #Files: /subfolder/Debian_13.X
 
-remove ALL deb 13.0 excep zzz.sh
+remove ALL deb 13.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 13.X
 
@@ -46,24 +64,27 @@ Others files
 
 	-remove zzz evince.sh
 		Remove evince.
-	
-	-remove zzz firefox-esr
+
+	-remove zzz fcitx (beta).sh
+		i have some problems now !
+
+	-remove zzz firefox-esr.sh
 		Remove Firefox
 	
-	-remove zzz libreoffice
+	-remove zzz ibus (beta).sh
+
+	-remove zzz libreoffice.sh
 	
 	-remove zzz rhythmbox
 
 	-remove zzz spelldictionnary.sh
 		A new file to remove spell dictionnary (beta)
 
-	-remove zzz fcitx (beta)
-		i have some problems now !
-
+--------------------------------------------------------------------
 
 #Files: /subfolder/Debian_12.X
 
-remove ALL deb 12.1 excep zzz.sh
+remove ALL deb 12.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 12.X
 
@@ -77,11 +98,22 @@ Others files
 	-remove zzz evince.sh
 		Remove evince.
 
-	-remove zzz rhythmbox.sh
-		Remove rhytmbox
+	-remove zzz fcitx (beta).sh
+		i have some problems now !
 
-	-...
+	-remove zzz firefox-esr.sh
+		Remove Firefox
+	
+	-remove zzz ibus (beta).sh
 
+	-remove zzz libreoffice.sh
+	
+	-remove zzz rhythmbox
+
+	-remove zzz spelldictionnary.sh
+		A new file to remove spell dictionnary (beta)
+
+--------------------------------------------------------------------
 
 #Files: /subfolder/Debian_11.X
 
@@ -99,12 +131,23 @@ Others files
 	-remove zzz evince.sh
 		Remove evince.
 
-	-remove zzz rhythmbox.sh
-		Remove rhytmbox
+	-remove zzz fcitx (beta).sh
+		i have some problems now !
 
-	-...
+	-remove zzz firefox-esr.sh
+		Remove Firefox
+	
+	-remove zzz ibus (beta).sh
+
+	-remove zzz libreoffice.sh
+	
+	-remove zzz rhythmbox
+
+	-remove zzz spelldictionnary.sh
+		A new file to remove spell dictionnary (beta)
 
 
+License
 --------------------------------------------------------------------
 
  	JUST DO WHAT THE F*** YOU WANT WITH THE PUBLIC LICENSE
