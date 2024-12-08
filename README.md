@@ -45,11 +45,11 @@ Search for specific files.
 	Add MANUALLY sudo apt-get remove before vlc (and other lines) in the file corrected.sh
 		-Execute file corrected.sh and remove your software.
 
-#Files included in folders.
+Files included in folders.
 
 --------------------------------------------------------------------
 
-#Files: /subfolder/Debian_13.X
+Files: /subfolder/Debian_13.X
 
 remove ALL deb 13.X excep zzz.sh
 
@@ -82,7 +82,7 @@ Others files
 
 --------------------------------------------------------------------
 
-#Files: /subfolder/Debian_12.X
+Files: /subfolder/Debian_12.X
 
 remove ALL deb 12.X excep zzz.sh
 
@@ -115,7 +115,7 @@ Others files
 
 --------------------------------------------------------------------
 
-#Files: /subfolder/Debian_11.X
+Files: /subfolder/Debian_11.X
 
 	-remove ALL deb 11.X excep zzz.sh
 
