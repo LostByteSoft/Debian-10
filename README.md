@@ -29,6 +29,18 @@ The file to use is " remove ALL deb 1X.X excep zzz.sh "
 
 Others remove files are for YOUR purpose if you really want to remove theses programs.
 
+Files included in folder.
+--------------------------------------------------------------------
+
+	-apt-get auto remove.sh
+		auto removes orphelin unused files.
+	
+	-apt-get_fix_broken.sh
+		Fix broken dependancies.
+	
+	-README.md
+		This file.
+
 
 Search for specific files.
 --------------------------------------------------------------------
@@ -45,8 +57,6 @@ Search for specific files.
 	Add MANUALLY sudo apt-get remove before vlc (and other lines) in the file corrected.sh
 		-Execute file corrected.sh and remove your software.
 
-Files included in folders.
-
 --------------------------------------------------------------------
 
 Files: /subfolder/Debian_13.X
@@ -54,11 +64,6 @@ Files: /subfolder/Debian_13.X
 remove ALL deb 13.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 13.X
-
-
-	-apt-get auto remove.sh
-		auto removes orphelin unused files.
-
 
 Others files
 
@@ -88,11 +93,6 @@ remove ALL deb 12.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 12.X
 
-
-	-apt-get auto remove.sh
-		auto removes orphelin unused files.
-
-
 Others files
 
 	-remove zzz evince.sh
@@ -120,11 +120,6 @@ Files: /subfolder/Debian_11.X
 	-remove ALL deb 11.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 11.X
-
-
-	-apt-get auto remove.sh
-		auto removes orphelin unused files.
-
 
 Others files
 
