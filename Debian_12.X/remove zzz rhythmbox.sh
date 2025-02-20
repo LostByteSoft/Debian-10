@@ -44,12 +44,19 @@ echo -------------------------========================-------------------------
 	echo
 echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
-	echo 2023-03-29_Wednesday_06:54:00
+	echo 2025-02-20-12-31-07
 	echo
 echo -------------------------========================-------------------------
+
 echo "https://techpiezo.com/linux/remove-a-package-without-removing-its-dependencies-in-ubuntu/"
+
+sudo dpkg -r --force-depends librhythmbox-core10
+sudo dpkg -r --force-depends rhythmbox-data
+sudo dpkg -r --force-depends rhythmbox-plugin-cdrecorder
 sudo dpkg -r --force-depends rhythmbox-plugins
 sudo dpkg -r --force-depends rhythmbox
+sudo dpkg -r --force-depends gir1.2-rb-3.0
+
 echo -------------------------========================-------------------------
 ## Software lead out
 	echo "Finish... with numbers of actions : $part"

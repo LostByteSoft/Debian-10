@@ -43,7 +43,7 @@ echo -------------------------========================-------------------------
 	echo
 echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
-	echo 2023-03-29_Wednesday_06:54:00
+	echo 2025-02-20-12-31-03
 	echo
 echo -------------------------========================-------------------------
 echo "https://techpiezo.com/linux/remove-a-package-without-removing-its-dependencies-in-ubuntu/"
