@@ -1,7 +1,4 @@
-# Debian 13 is here...
-
-Updated software to Debian 13.X !
-
+# Debian junk remover...
 
 Debian remove junk.
 --------------------------------------------------------------------
@@ -17,11 +14,11 @@ I use Debian:
 
 Debian is easy to use and really stable.
 
-Debian junk remover. Sh script to remove junk or bloatware softwares.
+Debian junk remover. Sh script to remove junk or bloatware softwares. Remove about 1 gb of data.
 
 Just run *.sh file and remove bloatwares automatically.
 
-The file to use is " remove ALL deb 1X.X excep zzz.sh "
+The file to use is " remove ALL deb 1X.X excep zzz.sh ".
 
 
 	-I update this file if i detect issues.
@@ -32,7 +29,7 @@ Others remove files are for YOUR purpose if you really want to remove theses pro
 Files included in folder.
 --------------------------------------------------------------------
 
-	-apt-get auto remove.sh
+	-apt-get_auto_remove.sh
 		auto removes orphelin unused files.
 	
 	-apt-get_fix_broken.sh
@@ -40,6 +37,9 @@ Files included in folder.
 	
 	-README.md
 		This file.
+
+	-search_and_create.sh
+		Search for specific softwares ans associated files.
 
 
 Search for specific files.
@@ -59,14 +59,12 @@ Search for specific files.
 
 --------------------------------------------------------------------
 
-Files: /subfolder/Debian_13.X
+#Files: /subfolder/Debian_13.X
 
 remove ALL deb 13.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 13.X
 
-Others files
-
 	-remove zzz evince.sh
 		Remove evince.
 
@@ -87,14 +85,12 @@ Others files
 
 --------------------------------------------------------------------
 
-Files: /subfolder/Debian_12.X
+# Files: /subfolder/Debian_12.X
 
 remove ALL deb 12.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 12.X
 
-Others files
-
 	-remove zzz evince.sh
 		Remove evince.
 
@@ -115,13 +111,11 @@ Others files
 
 --------------------------------------------------------------------
 
-Files: /subfolder/Debian_11.X
+#Files: /subfolder/Debian_11.X
 
 	-remove ALL deb 11.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 11.X
-
-Others files
 
 	-remove zzz evince.sh
 		Remove evince.
@@ -173,5 +167,5 @@ License
  		H0H 0H0
 
 --------------------------------------------------------------------
-# --- End of file ---
+ --- End of file ---
 
