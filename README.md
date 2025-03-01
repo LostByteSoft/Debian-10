@@ -59,7 +59,7 @@ Search for specific files.
 
 --------------------------------------------------------------------
 
-#Files: /subfolder/Debian_13.X
+# Files: /subfolder/Debian_13.X
 
 remove ALL deb 13.X excep zzz.sh
 
@@ -111,7 +111,7 @@ remove ALL deb 12.X excep zzz.sh
 
 --------------------------------------------------------------------
 
-#Files: /subfolder/Debian_11.X
+# Files: /subfolder/Debian_11.X
 
 	-remove ALL deb 11.X excep zzz.sh
 
