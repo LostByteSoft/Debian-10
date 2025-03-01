@@ -1,29 +1,36 @@
 #!/bin/bash
 #!/usr/bin/ffmpeg
-	start=$SECONDS
-	now=$(date +"%Y-%m-%d_%A_%H:%M:%S")
+
+	printf '\033[8;30;100t'		# will resize the window.
 
 echo -------------------------===== Start of bash ====-------------------------
-	#printf '\033[8;40;90t'		# will resize the window, if needed.
-	printf '\033[8;50;125t'		# will resize the window, if needed.
-	#printf '\033[8;40;130t'	# will resize the window, if needed.
-	
+
+	start=$SECONDS
+	now=$(date +"%Y-%m-%d_%A_%H:%M:%S")	## time now
+	id=$(echo $PPID)			## current process id of the bash process
+
 	red=`tput setaf 1`
 	green=`tput setaf 2`
 	yellow=`tput setaf 11`
 	blue=`tput setaf 12`
 	reset=`tput sgr0`
 
-	## All variables 0 or 1
-	autoquit=0	# autoquit anyway to script takes LESS than 2 min to complete. (0 or 1, change in conjoncture noquit=0)
-	debug=0		# test debug. (0 or 1 debug mode)
-	error=0		# test error. (0 or 1 make error)
-	part=0		# don't change this value. (0)
-	noquit=1	# No quit after all operations. (0 or 1 noquit)
-	wol=1		# Wake on lan skip. (0 or 1 skip)
-	random=$(shuf -i 4096-131072 -n 1)	# Used for temp folders. A big number hard to guess for security reasons.
-	## random=$RANDOM	# Normal random number.
+	## General purposes variables. Needed before program to random variables.
+	## All variables must be 0
+	part=0		## Don't change this value.
+	primeerror=0	## Ending error detector, do not change.
+	error=0		## Test error, do not change.
 	
+	## All variables must be 0 or 1
+	automatic=0	## automatic without (at least minimal) dialog box. (0 or 1)
+	debug=0		## test debug. (0 or 1 debug mode)
+	noquit=1	## noquit option. (0 or 1)
+	lowercase=0	## Change all to lowercase option. (0 or 1)
+
+	## Auto-generated variables. Do not change
+	random=$(shuf -i 4096-131072 -n 1)	# Used for temp folders. A big number hard to guess for security reasons.
+	random2=$RANDOM
+
 	echo
 	echo "Software lead-in. LostByteSoft ; https://github.com/LostByteSoft"
 	echo
@@ -33,9 +40,16 @@ echo -------------------------===== Start of bash ====-------------------------
 	echo "Current time : $now"
 	echo
 	echo "Common variables, you can changes theses variables as you wish to test."
-	echo "Debug data : autoquit=$autoquit debug=$debug error=$error part=$part noquit=$noquit wol=$wol random=$random"
+	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 primeerror=$primeerror id=$id"
+	me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
 	echo
-echo -------------------------========================-------------------------
+	echo "Running job file : $me"
+	echo
+	echo "This version : debian-live-12.9.0-amd64-cinnamon.iso"
+	echo
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
 	echo
 	echo  "${green}	████████████████     ALL OK / ACTIVE      ████████████████ ${reset}"
 	echo   "${blue}	████████████████      INFORMATION(S)      ████████████████ ${reset}"
@@ -96,8 +110,14 @@ echo -------------------------========================-------------------------
 	sudo apt-get remove hunspell-vi -y
 	sudo apt-get remove hunspell -y -y
 
-echo -------------------------========================-------------------------
-## Software lead out
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Software lead out."
+	printf '\033[8;26;102t'		## minimum of ? for graphics, will resize the window, if needed.
+	echo
+	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random"
+	echo "Debug data : random2=$random2 automatic=$automatic primeerror=$primeerror id=$id"
+	echo
 	echo "Finish... with numbers of actions : $part"
 	echo "This script take $(( SECONDS - start )) seconds to complete."
 	date=$(date -d@$(( SECONDS - start )) -u +%H:%M:%S)
@@ -105,12 +125,66 @@ echo -------------------------========================-------------------------
 	now=$(date +"%Y-%m-%d_%A_%I:%M:%S")
 	echo "Current time : $now"
 	echo
+	echo "$now (Time now)" >>/dev/shm/logs.txt
+	echo "	Time needed : $date" >>/dev/shm/logs.txt
+	echo "	Name of software : $me" >>/dev/shm/logs.txt
+	echo "	Debug data : debug=$debug debugcore=$debugcore error=$error part=$part noquit=$noquit random=$random random2=$random2 automatic=$automatic primeerror=$primeerror id=$id" >>/dev/shm/logs.txt
+	echo "	File (If any used) : $file" >>/dev/shm/logs.txt
+	echo " " >>/dev/shm/logs.txt
+
 echo -------------------------===== End of Bash ======-------------------------
+## Exit, wait or auto-quit.
+
+	if [ "$primeerror" -ge "1" ]; then
+		echo
+		echo "	${red}████████████████████████████████████████████${reset}"
+		echo "	${red}██                                        ██${reset}"
+		echo "	${red}██         Unknown entry event...         ██${reset}"
+		echo "	${red}██                                        ██${reset}"
+		echo "	${red}████████████████████████████████████████████${reset}"
+		echo
+		echo "Numbers of error(s) : $primeerror"
+		echo
+		echo "$id - RUNNING : $me"
+		echo
+		debug
+		#functionsmallbar
+		noquit=1
+	else
+		echo
+		echo "${green}████████████████████████████████████████${reset}	${blue}████████████████████████████████████████${reset}"
+		echo "${green}██                                    ██${reset}	${blue}██                                    ██${reset}"
+		echo "${green}██         NO errors detected.        ██${reset}	${blue}██       Time needed : $date       ██${reset}"
+		echo "${green}██                                    ██${reset}	${blue}██                                    ██${reset}"
+		echo "${green}████████████████████████████████████████${reset}	${blue}████████████████████████████████████████${reset}"
+		echo
+		echo "$id - RUNNING : $me"
+	fi
+
+	if [ "$noquit" -eq "1" ]; then
 		echo
 		echo "${blue}	█████████████████ NO exit activated ███████████████████${reset}"
 		echo
 		read -n 1 -s -r -p "Press ENTER key to exit !"
-		exit
+		echo
+		fi
+
+	if [ "$debug" -eq "1" ]; then
+		debug
+		echo "${blue}		█████ DEBUG WAIT | Program finish. █████${reset}"
+		echo
+		read -n 1 -s -r -p "Press ENTER key to continue !"
+		echo
+		fi
+
+	echo
+	echo "${green}	███████████████ Finish, quit in 3 seconds █████████████████${reset}"
+	sleep 0.5
+	echo
+	functionsmallbar
+	echo
+	sleep 1
+	exit
 
 ## -----===== Start of eula =====-----
 
