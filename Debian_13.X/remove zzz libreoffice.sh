@@ -44,7 +44,42 @@ echo -------------------------===== Start of bash ====-------------------------
 	echo
 	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 primeerror=$primeerror"
 	echo
+## Simple function small bar to wait 3 sec.
+	## Version 1.04
+	## https://github.com/LostByteSoft
+	## LostBytesSoft, lost byte softwares, because everything is ephemeral.
+	## Part of code came from here https://github.com/rabb1t/spinners , Created by Pavel Raykov aka 'rabbit' / 2018-11-08 (c)
 
+	functionsmallbar()
+		{
+		if [ "$debug" -eq 0 ]; then
+			#echo
+			width=40
+			perc=0
+			speed="0.1" # seconds
+			inc="$(echo "100/${width}" | bc -ql)"
+			#echo -n "	Wake Up.. 0% "
+			echo -n "	Wait... "
+
+			while [ $width -ge 0 ]; do
+				printf "\e[0;93;103m%s\e[0m %.0f%%" "0" "${perc}"
+				sleep $speed
+				let width--
+				perc="$(echo "${perc}+${inc}" | bc -ql)"
+		
+				if [ ${perc%%.*} -lt 10 ]; then
+					printf "\b\b\b"
+				else
+					printf "\b\b\b\b"
+				fi
+			done
+			echo
+		else
+			echo ${blue} ████████████████████ DEBUG BYPASS ALL BARS ████████████████████${reset}
+		fi
+		}
+
+##-------------------------=========== SEPARATOR =============-------------------------
 echo -------------------------========================-------------------------
 	echo
 	echo  "${green}	████████████████     ALL OK / ACTIVE      ████████████████ ${reset}"
