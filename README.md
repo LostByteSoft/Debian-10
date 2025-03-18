@@ -61,6 +61,8 @@ Search for specific files.
 
 # Files: /subfolder/Debian_13.X
 
+I DO NOT SUGGEST THAT YOU USE FILES NAMED ZZZ
+
 remove ALL deb 13.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 13.X
@@ -83,9 +85,13 @@ remove ALL deb 13.X excep zzz.sh
 	-remove zzz spelldictionnary.sh
 		A new file to remove spell dictionnary (beta)
 
+ZZZ files work but cause a lot of errors.
+
 --------------------------------------------------------------------
 
 # Files: /subfolder/Debian_12.X
+
+I DO NOT SUGGEST THAT YOU USE FILES NAMED ZZZ
 
 remove ALL deb 12.X excep zzz.sh
 
@@ -109,11 +115,15 @@ remove ALL deb 12.X excep zzz.sh
 	-remove zzz spelldictionnary.sh
 		A new file to remove spell dictionnary (beta)
 
+ZZZ files work but cause a lot of errors.
+
 --------------------------------------------------------------------
 
 # Files: /subfolder/Debian_11.X
 
-	-remove ALL deb 11.X excep zzz.sh
+I DO NOT SUGGEST THAT YOU USE FILES NAMED ZZZ
+
+remove ALL deb 11.X excep zzz.sh
 
 	-script to remove some bloatwares includes with Debian 11.X
 
@@ -135,6 +145,7 @@ remove ALL deb 12.X excep zzz.sh
 	-remove zzz spelldictionnary.sh
 		A new file to remove spell dictionnary (beta)
 
+ZZZ files work but cause a lot of errors.
 
 License
 --------------------------------------------------------------------
