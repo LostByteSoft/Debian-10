@@ -164,7 +164,7 @@ part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 
 echo "Remove junk graphics"
-	sudo apt-get remove eog -y
+	sudo dpkg --purge --force-depends eog -y
 	sudo apt-get remove simple-scan -y
 	sudo apt-get remove shotwell -y
 	sudo apt-get remove gimp-help-sv -y

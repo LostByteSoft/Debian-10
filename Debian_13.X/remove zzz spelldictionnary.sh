@@ -96,9 +96,52 @@ part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 
 echo "Remove dictionnary ?"
+	echo
 
 	sudo dpkg -r --force-depends aspell
-	sudo dpkg -r --force-depends dictionaries-common	## Does not want to remove
+	sudo dpkg -r --force-depends aspell-am
+	sudo dpkg -r --force-depends aspell-am
+	sudo dpkg -r --force-depends aspell-ar
+	sudo dpkg -r --force-depends aspell-ar-large
+	sudo dpkg -r --force-depends aspell-bg
+	sudo dpkg -r --force-depends aspell-ca
+	sudo dpkg -r --force-depends aspell-cs
+	sudo dpkg -r --force-depends aspell-cy
+	sudo dpkg -r --force-depends aspell-da
+	sudo dpkg -r --force-depends aspell-de
+	sudo dpkg -r --force-depends aspell-el
+	sudo dpkg -r --force-depends aspell-en
+	sudo dpkg -r --force-depends aspell-eo
+	sudo dpkg -r --force-depends aspell-es
+	sudo dpkg -r --force-depends aspell-et
+	sudo dpkg -r --force-depends aspell-eu
+	sudo dpkg -r --force-depends aspell-fa
+	sudo dpkg -r --force-depends aspell-fr
+	sudo dpkg -r --force-depends aspell-ga
+	sudo dpkg -r --force-depends aspell-gl-minimos
+	sudo dpkg -r --force-depends aspell-he
+	sudo dpkg -r --force-depends aspell-hr
+	sudo dpkg -r --force-depends aspell-hu
+	sudo dpkg -r --force-depends aspell-is
+	sudo dpkg -r --force-depends aspell-it
+	sudo dpkg -r --force-depends aspell-kk
+	sudo dpkg -r --force-depends aspell-ku
+	sudo dpkg -r --force-depends aspell-lt
+	sudo dpkg -r --force-depends aspell-lv
+	sudo dpkg -r --force-depends aspell-nl
+	sudo dpkg -r --force-depends aspell-no
+	sudo dpkg -r --force-depends aspell-pl
+	sudo dpkg -r --force-depends aspell-pt-br
+	sudo dpkg -r --force-depends aspell-pt-pt
+	sudo dpkg -r --force-depends aspell-ro
+	sudo dpkg -r --force-depends aspell-ru
+	sudo dpkg -r --force-depends aspell-sk
+	sudo dpkg -r --force-depends aspell-sl
+	sudo dpkg -r --force-depends aspell-sv
+	sudo dpkg -r --force-depends aspell-tl
+	sudo dpkg -r --force-depends aspell-uk
+	#sudo dpkg -r --force-depends dictionaries-common	## Does not want to remove, cinnamon need
+	sudo dpkg -r --force-depends enchant-2
 	sudo dpkg -r --force-depends hspell
 	sudo dpkg -r --force-depends hspell-gui
 	sudo dpkg -r --force-depends hunspell
@@ -115,6 +158,8 @@ echo "Remove dictionnary ?"
 	sudo dpkg -r --force-depends hunspell-de-de
 	sudo dpkg -r --force-depends hunspell-el
 	sudo dpkg -r --force-depends hunspell-en-gb
+	sudo dpkg -r --force-depends hunspell-en-us
+	sudo dpkg -r --force-depends hunspell-eo
 	sudo dpkg -r --force-depends hunspell-eu
 	sudo dpkg -r --force-depends hunspell-fr
 	sudo dpkg -r --force-depends hunspell-fr-classical
@@ -174,7 +219,9 @@ echo "Remove dictionnary ?"
 	sudo dpkg -r --force-depends ispanish
 	sudo dpkg -r --force-depends ispell			## Does not want to remove
 	sudo dpkg -r --force-depends iswiss
-	sudo dpkg -r --force-depends libhunspell-1.7-0		## Does not want to remove
+	sudo dpkg -r --force-depends libenchant-2-2
+	sudo dpkg -r --force-depends libenchant-2-voikko
+	#sudo dpkg -r --force-depends libhunspell-1.7-0		## Does not want to remove, cinnamon need
 	sudo dpkg -r --force-depends myspell-eo
 	sudo dpkg -r --force-depends myspell-es
 	sudo dpkg -r --force-depends myspell-et
@@ -209,8 +256,11 @@ echo "Remove dictionnary ?"
 	sudo dpkg -r --force-depends wportuguese
 	sudo dpkg -r --force-depends wspanish
 	sudo dpkg -r --force-depends wswedish
-	## sudo dpkg -r --force-depends hunspell-en-us		## Need at least one language
 
+	## DO NOT REMOVE ## needed for gedit sudo dpkg -r --force-depends libgspell-1-3 ## needed for gedit
+	## DO NOT REMOVE ## needed for cinnamon sudo dpkg -r --force-depends libwebkit2gtk-4.1-0
+
+echo
 echo -------------------------========================-------------------------
 echo "Software lead out."
 	echo
