@@ -93,12 +93,74 @@ echo -------------------------========================-------------------------
 	echo
 echo -------------------------========================-------------------------
 
-echo "Remove ibus ?"
+echo "Remove FCITX ?"
 
-	sudo apt-get remove ibus -y
-	sudo apt-get remove ibus-hangul -y
-	sudo apt-get remove ibus-clutter -y	## problem in terminal if removed
-	
+	sudo dpkg -r --force-depends fcitx-bin
+	sudo dpkg -r --force-depends fcitx-frontend-all
+	sudo dpkg -r --force-depends fcitx-m17n
+	sudo dpkg -r --force-depends fcitx-module-dbus
+	sudo dpkg -r --force-depends fcitx-module-lua
+	sudo dpkg -r --force-depends fcitx-module-quickphrase-editor5
+	sudo dpkg -r --force-depends fcitx-module-x11
+	sudo dpkg -r --force-depends fcitx-modules
+	sudo dpkg -r --force-depends fcitx5-chewing
+	sudo dpkg -r --force-depends fcitx5-chinese-addons
+	sudo dpkg -r --force-depends fcitx5-chinese-addons-bin
+	sudo dpkg -r --force-depends fcitx5-chinese-addons-data
+	sudo dpkg -r --force-depends fcitx5-config-qt
+	sudo dpkg -r --force-depends fcitx5-data
+	sudo dpkg -r --force-depends fcitx5-frontend-all
+	sudo dpkg -r --force-depends fcitx5-frontend-gtk3
+	sudo dpkg -r --force-depends fcitx5-frontend-gtk4
+	sudo dpkg -r --force-depends fcitx5-frontend-qt5
+	sudo dpkg -r --force-depends fcitx5-frontend-qt6
+	sudo dpkg -r --force-depends fcitx5-m17n
+	sudo dpkg -r --force-depends fcitx5-module-chttrans
+	sudo dpkg -r --force-depends fcitx5-module-cloudpinyin
+	sudo dpkg -r --force-depends fcitx5-module-fullwidth
+	sudo dpkg -r --force-depends fcitx5-module-lua
+	sudo dpkg -r --force-depends fcitx5-module-lua-common
+	sudo dpkg -r --force-depends fcitx5-module-pinyinhelper
+	sudo dpkg -r --force-depends fcitx5-module-punctuation
+	sudo dpkg -r --force-depends fcitx5-pinyin
+	sudo dpkg -r --force-depends fcitx5-table
+	sudo dpkg -r --force-depends libfcitx-config4
+	sudo dpkg -r --force-depends libfcitx-core0
+	sudo dpkg -r --force-depends libfcitx-gclient1
+	sudo dpkg -r --force-depends libfcitx-qt5-1
+	sudo dpkg -r --force-depends libfcitx-qt5-data
+	sudo dpkg -r --force-depends libfcitx-utils0
+	sudo dpkg -r --force-depends libfcitx5-qt-data
+	sudo dpkg -r --force-depends libfcitx5-qt1
+	sudo dpkg -r --force-depends libfcitx5config6
+	sudo dpkg -r --force-depends libfcitx5core7
+	sudo dpkg -r --force-depends libfcitx5utils2
+	sudo dpkg -r --force-depends remove fcitx-config-common
+	sudo dpkg -r --force-depends remove fcitx-data
+
+	## Update 2025-03-18-09-55-09
+	sudo dpkg --purge --force-depends fcitx
+	sudo dpkg --purge --force-depends fcitx-chewing
+	sudo dpkg --purge --force-depends fcitx-configgtk
+	sudo dpkg --purge --force-depends fcitx-frontend-gtk2
+	sudo dpkg --purge --force-depends fcitx-frontend-gtk3
+	sudo dpkg --purge --force-depends fcitx-frontend-qt5
+	sudo dpkg --purge --force-depends fcitx-frontend-qt
+	sudo dpkg --purge --force-depends fcitx-module-kimpanel
+	sudo dpkg --purge --force-depends fcitx-pinyin
+	sudo dpkg --purge --force-depends fcitx-table
+	sudo dpkg --purge --force-depends fcitx-ui-classic
+	sudo dpkg --purge --force-depends fcitx-config-gtk
+	sudo dpkg --purge --force-depends fcitx-frontend-qt6
+	sudo dpkg --purge --force-depends fcitx-table-amharic
+	sudo dpkg --purge --force-depends fcitx-table-array30
+	sudo dpkg --purge --force-depends fcitx-table-boshiamy
+	sudo dpkg --purge --force-depends fcitx-table-cangjie
+	sudo dpkg --purge --force-depends fcitx-table-cangjie3
+	sudo dpkg --purge --force-depends fcitx-table-cangjie5
+	sudo dpkg --purge --force-depends fcitx-table-quick3
+	sudo dpkg --purge --force-depends fcitx-table-quick5
+
 echo -------------------------========================-------------------------
 echo "Software lead out."
 	echo

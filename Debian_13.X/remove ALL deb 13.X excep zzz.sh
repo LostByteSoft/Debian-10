@@ -95,7 +95,7 @@ echo -------------------------========================-------------------------
 	echo
 echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
-	echo 2024-12-08-13-47-10_Sunday
+	echo 2025-03-11
 	echo
 echo -------------------------========================-------------------------
 	echo
@@ -111,13 +111,13 @@ echo -------------------------========================-------------------------
 	echo "Don't hack paid software, free software exists and does the job better."
 	echo
 echo -------------------------========================-------------------------
-echo "Press enter to continue or X to quit. Remove all junk ?"
-	read name
 
 	echo   "${blue}	████████████████ START ████████████████ ${reset}"
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
+echo
+echo "Input password to continue or X to quit. Remove all junk ?"
 
 echo "Remove junk accessoires"
 	sudo apt-get remove deja-dup -y
