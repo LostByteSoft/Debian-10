@@ -45,192 +45,140 @@ echo -------------------------===== Start of bash ====-------------------------
 	echo
 	echo "Running job file : $me"
 	echo
-	echo "This version : debian-live-12.9.0-amd64-cinnamon.iso"
+	echo "This version : debian-live-12.10.0-amd64-cinnamon.iso"
 	echo
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 	echo
-	echo  "${green}	████████████████     ALL OK / ACTIVE      ████████████████ ${reset}"
-	echo   "${blue}	████████████████      INFORMATION(S)      ████████████████ ${reset}"
+	echo  "${green}	████████████████	 ALL OK / ACTIVE	  ████████████████ ${reset}"
+	echo   "${blue}	████████████████	  INFORMATION(S)	  ████████████████ ${reset}"
 	echo "${yellow}	████████████████   ATTENTION / INACTIVE   ████████████████ ${reset}"
-	echo    "${red}	████████████████   FATAL ERROR / OFFLINE  ████████████████ ${reset}"
+	echo	"${red}	████████████████   FATAL ERROR / OFFLINE  ████████████████ ${reset}"
 	echo
 echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
-	echo 2025-03-12
-	echo
-
-echo -------------------------========================-------------------------
-	echo
-	echo "Remove ALL junk and unused files"
-	echo "By LostBytesSoft"
-	echo "Optimized For : Debian non free Cinnamon 12.0 x64"
-	echo
-	echo "This version : debian-live-12.9.0-amd64-cinnamon.iso"
-	echo
-	echo "Informations : (EULA at the end of file, open in text.)"
-	echo "By LostByteSoft, no copyright or copyleft. https://github.com/LostByteSoft"
-	echo
-	echo "Don't hack paid software, free software exists and does the job better."
+	echo 2025-03-19-10-16-53
 	echo
 echo -------------------------========================-------------------------
-echo "Press enter to continue or X to quit. Remove all junk ?"
-	read name
+echo "Remove aspell , hunspell , myspell"
+	echo
 
-	echo   "${blue}	████████████████ START ████████████████ ${reset}"
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-echo "Remove junk accessoires"
-	sudo apt-get remove deja-dup -y
-	sudo apt-get remove gnote -y
-	sudo apt-get remove goldendict -y
-	sudo apt-get remove yelp -y
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-echo "Remove junk audio"
-	sudo apt-get remove brasero-common -y
-	sudo apt-get remove brasero -y
-	sudo apt-get remove cheese -y
-	sudo apt-get remove gnome-sound-recorder -y
-	sudo apt-get remove sound-juicer -y
-	sudo apt-get remove totem -y
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-echo "Remove junk games"
-	sudo apt-get remove aisleriot -y
-	sudo apt-get remove five-or-more -y
-	sudo apt-get remove four-in-a-row -y
-	sudo apt-get remove gnome-2048 -y
-	sudo apt-get remove gnome-chess -y
-	sudo apt-get remove gnome-klotski -y
-	sudo apt-get remove gnome-mahjongg -y
-	sudo apt-get remove gnome-mines -y
-	sudo apt-get remove gnome-nibbles -y
-	sudo apt-get remove gnome-robots -y
-	sudo apt-get remove gnome-sudoku -y
-	sudo apt-get remove gnome-taquin -y
-	sudo apt-get remove gnome-tetravex -y
-	sudo apt-get remove hitori -y
-	sudo apt-get remove iagno -y
-	sudo apt-get remove lightsoff -y
-	sudo apt-get remove quadrapassel -y
-	sudo apt-get remove swell-foop -y
-	sudo apt-get remove tali -y
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-	echo "Remove junk graphics"
-	sudo apt-get remove eog -y
-	sudo apt-get remove shotwell -y
-	sudo apt-get remove simple-scan -y
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-echo "Remove junk internet"
-	sudo apt-get remove deluge-common -y
-	sudo apt-get remove deluge-gtk -y
-	sudo apt-get remove deluge -y
-	sudo apt-get remove hexchat -y
-	sudo apt-get remove pidgin -y
-	sudo apt-get remove remmina -y
-	sudo apt-get remove thunderbird -y
-	sudo apt-get remove transmission-gtk -y
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-echo "Remove junk Office"
-	echo Nothing to remove in Debian 12.X here.
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-echo "Remove junk preferences"
-	sudo apt-get remove anthy -y
-	sudo apt-get remove kasumi -y
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-echo "Remove junk system"
-	killall -9 uim
+	sudo apt-get remove aspell-am -y
+	sudo apt-get remove aspell-ar-large -y
+	sudo apt-get remove aspell-ar -y
+	sudo apt-get remove aspell-bg -y
+	sudo apt-get remove aspell-ca -y
+	sudo apt-get remove aspell-cs -y
+	sudo apt-get remove aspell-cy -y
+	sudo apt-get remove aspell-da -y
+	sudo apt-get remove aspell-de -y
+	sudo apt-get remove aspell-el -y
+	sudo apt-get remove aspell-en -y
+	sudo apt-get remove aspell-eo -y
+	sudo apt-get remove aspell-es -y
+	sudo apt-get remove aspell-et -y
+	sudo apt-get remove aspell-eu -y
+	sudo apt-get remove aspell-fa -y
+	sudo apt-get remove aspell-fr -y
+	sudo apt-get remove aspell-ga -y
+	sudo apt-get remove aspell-gl-minimos -y
+	sudo apt-get remove aspell-he -y
+	sudo apt-get remove aspell-hr -y
+	sudo apt-get remove aspell-hu -y
+	sudo apt-get remove aspell-is -y
+	sudo apt-get remove aspell-it -y
+	sudo apt-get remove aspell-kk -y
+	sudo apt-get remove aspell-ku -y
+	sudo apt-get remove aspell-lt -y
+	sudo apt-get remove aspell-lv -y
+	sudo apt-get remove aspell-nl -y
+	sudo apt-get remove aspell-no -y
+	sudo apt-get remove aspell-pl -y
+	sudo apt-get remove aspell-pt-br -y
+	sudo apt-get remove aspell-pt-pt -y
+	sudo apt-get remove aspell-ro -y
+	sudo apt-get remove aspell-ru -y
+	sudo apt-get remove aspell-sk -y
+	sudo apt-get remove aspell-sl -y
+	sudo apt-get remove aspell-sv -y
+	sudo apt-get remove aspell-tl -y
+	sudo apt-get remove aspell-uk -y
 	sudo apt-get remove aspell -y
-	sudo apt-get remove eject -y
+	sudo apt-get remove hspell-gui -y
+	sudo apt-get remove hspell -y
+	sudo apt-get remove hunspell-ar -y
+	sudo apt-get remove hunspell-be -y
+	sudo apt-get remove hunspell-bg -y
+	sudo apt-get remove hunspell-bs -y
+	sudo apt-get remove hunspell-ca -y
+	sudo apt-get remove hunspell-cs -y
+	sudo apt-get remove hunspell-da -y
+	sudo apt-get remove hunspell-de-at -y
+	sudo apt-get remove hunspell-de-ch -y
+	sudo apt-get remove hunspell-de-de -y
+	sudo apt-get remove hunspell-el -y
+	sudo apt-get remove hunspell-en-gb -y
+	sudo apt-get remove hunspell-en-us -y
+	sudo apt-get remove hunspell-eu -y
+	sudo apt-get remove hunspell-fr-classical -y
+	sudo apt-get remove hunspell-fr-revised -y
+	sudo apt-get remove hunspell-fr -y
+	sudo apt-get remove hunspell-gl-es -y
+	sudo apt-get remove hunspell-gl -y
+	sudo apt-get remove hunspell-gu -y
+	sudo apt-get remove hunspell-hi -y
+	sudo apt-get remove hunspell-hr -y
+	sudo apt-get remove hunspell-hu -y
+	sudo apt-get remove hunspell-id -y
+	sudo apt-get remove hunspell-is -y
+	sudo apt-get remove hunspell-it -y
+	sudo apt-get remove hunspell-kk -y
+	sudo apt-get remove hunspell-kmr -y
+	sudo apt-get remove hunspell-ko -y
+	sudo apt-get remove hunspell-lt -y
+	sudo apt-get remove hunspell-lv -y
+	sudo apt-get remove hunspell-ml -y
+	sudo apt-get remove hunspell-ne -y
+	sudo apt-get remove hunspell-nl -y
+	sudo apt-get remove hunspell-pl -y
+	sudo apt-get remove hunspell-pt-br -y
+	sudo apt-get remove hunspell-pt-pt -y
+	sudo apt-get remove hunspell-ro -y
+	sudo apt-get remove hunspell-ru -y
+	sudo apt-get remove hunspell-si -y
+	sudo apt-get remove hunspell-sl -y
+	sudo apt-get remove hunspell-sr -y
+	sudo apt-get remove hunspell-sv-se -y
+	sudo apt-get remove hunspell-sv -y
+	sudo apt-get remove hunspell-te -y
+	sudo apt-get remove hunspell-th -y
+	sudo apt-get remove hunspell-vi -y
 	sudo apt-get remove hunspell -y
-	#sudo apt-get remove ibus-clutter -y	## problem in terminal if removed
-	#sudo apt-get remove ibus -y		## problem in terminal if removed
-	sudo apt-get remove id3 -y		## command line id3 tag
-	sudo apt-get remove im-config -y
-	sudo apt-get remove mdadm -y		## raid software
-	sudo apt-get remove mozc-data -y
-	sudo apt-get remove mozc-utils-gui -y
-	sudo apt-get remove uim-data -y
-	sudo apt-get remove uim-mozc -y
-	sudo apt-get remove uim-xim -y
-	sudo apt-get remove uim -y
-	sudo apt-get remove vino -y
-	sudo apt-get remove yelp-xsl -y
-	sudo apt-get remove yelp -y
-	sudo dpkg -r --force-depends fcitx5-chewing
-	sudo dpkg -r --force-depends fcitx5-chinese-addons
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-bin
-	sudo dpkg -r --force-depends fcitx5-chinese-addons-data
-	sudo dpkg -r --force-depends fcitx5-data -y
-	sudo dpkg -r --force-depends fcitx5-module-chttrans
-	sudo dpkg -r --force-depends fcitx5-module-cloudpinyin
-	sudo dpkg -r --force-depends fcitx5-module-fullwidth
-	sudo dpkg -r --force-depends fcitx5-module-lua
-	sudo dpkg -r --force-depends fcitx5-module-lua-common
-	sudo dpkg -r --force-depends fcitx5-module-pinyinhelper
-	sudo dpkg -r --force-depends fcitx5-module-punctuation
-	sudo dpkg -r --force-depends fcitx5-pinyin
-	sudo dpkg -r --force-depends fcitx5-table
-	sudo dpkg -r --force-depends fcitx-bin -y
-	sudo dpkg -r --force-depends fcitx-config-common -y
-	sudo dpkg -r --force-depends fcitx-m17n
-	sudo dpkg -r --force-depends fcitx-module-dbus -y
-	sudo dpkg -r --force-depends fcitx-module-lua
-	sudo dpkg -r --force-depends fcitx-module-quickphrase-editor5
-	sudo dpkg -r --force-depends fcitx-modules
-	sudo dpkg -r --force-depends fcitx-module-x11
-	sudo dpkg -r --force-depends libfcitx5config6
-	sudo dpkg -r --force-depends libfcitx5core7
-	sudo dpkg -r --force-depends libfcitx5-qt1
-	sudo dpkg -r --force-depends libfcitx5-qt-data
-	sudo dpkg -r --force-depends libfcitx5utils2
-	sudo dpkg -r --force-depends libfcitx-config4
-	sudo dpkg -r --force-depends libfcitx-qt5-1
-	sudo dpkg -r --force-depends libfcitx-qt5-data
-	sudo dpkg -r --force-depends libfcitx-utils0
-	sudo dpkg -r --force-depends fcitx-config-gtk
-	sudo dpkg -r --force-depends libfcitx-core0
-	sudo dpkg -r --force-depends libfcitx-gclient1
+	sudo apt-get remove ispell -y
+	sudo apt-get remove libaspell15 -y
+	sudo apt-get remove libgspell-1-2 -y
+	sudo apt-get remove libgspell-1-common -y
+	sudo apt-get remove libhfstospell11 -y
+	sudo apt-get remove libhunspell-1.7-0 -y
+	sudo apt-get remove myspell-eo -y
+	sudo apt-get remove myspell-es -y
+	sudo apt-get remove myspell-et -y
+	sudo apt-get remove myspell-fa -y
+	sudo apt-get remove myspell-ga -y
+	sudo apt-get remove myspell-nb -y
+	sudo apt-get remove myspell-nn -y
+	sudo apt-get remove myspell-sk -y
+	sudo apt-get remove myspell-sq -y
+	sudo apt-get remove myspell-uk -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-echo "Remove junk administration"
-	sudo apt-get remove gnome-logs -y
-	sudo apt-get remove gnome-software -y
-	sudo apt-get remove malcontent -y
-	sudo apt-get remove mlterm-common -y
-	sudo apt-get remove mlterm-tiny -y
-	sudo apt-get remove mlterm -y
-	sudo apt-get remove xiterm+thai -y
-	sudo apt-get remove xterm -y
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-echo Finish removing applications.
-
+echo "Will now run apt-get autoremove -y to remove associated files."
 	echo
-	echo "${yellow}	████████████████ REMOVE APP FINISH ████████████████ ${reset}"
+	echo   "${blue}	████████████████ START ████████████████ ${reset}"
 	echo
-
-part=$((part+1))
-echo "-------------------------===== Section $part =====-------------------------"
-echo autoremove unused associated files.
-	echo "Will now run apt-get autoremove -y to remove associated files."
 	sudo apt-get autoremove -y
 
 	echo

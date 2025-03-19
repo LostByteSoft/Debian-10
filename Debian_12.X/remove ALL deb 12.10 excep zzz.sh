@@ -45,8 +45,6 @@ echo -------------------------===== Start of bash ====-------------------------
 	echo
 	echo "Running job file : $me"
 	echo
-	echo "This version : debian-live-12.9.0-amd64-cinnamon.iso"
-	echo
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
@@ -58,16 +56,17 @@ echo "-------------------------===== Section $part =====------------------------
 	echo
 echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
-	echo 2025-03-12
+	echo 2025-03-19-11-10-19
 	echo
 
 echo -------------------------========================-------------------------
 	echo
-	echo "Remove ALL junk and unused files"
-	echo "By LostBytesSoft"
-	echo "Optimized For : Debian non free Cinnamon 12.0 x64"
+	echo "Remove ALL junk and unused files By LostBytesSoft"
+	echo "Optimized For : Debian non free Cinnamon 12 x64"
 	echo
-	echo "This version : debian-live-12.9.0-amd64-cinnamon.iso"
+	echo "THIS IS NOT AN AGRESSIVE REMOVE. ONLY REMOVES SOFTWARES WITH LITTLE USE."
+	echo
+	echo "This version : debian-live-12.10.0-amd64-cinnamon.iso"
 	echo
 	echo "Informations : (EULA at the end of file, open in text.)"
 	echo "By LostByteSoft, no copyright or copyleft. https://github.com/LostByteSoft"
@@ -79,18 +78,25 @@ echo "Press enter to continue or X to quit. Remove all junk ?"
 	read name
 
 	echo   "${blue}	████████████████ START ████████████████ ${reset}"
+	echo
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo "Remove junk accessoires"
+	echo
 	sudo apt-get remove deja-dup -y
 	sudo apt-get remove gnote -y
 	sudo apt-get remove goldendict -y
 	sudo apt-get remove yelp -y
+	sudo apt-get remove debian-reference-common -y
+	sudo apt-get remove debian-reference-es -y
+	sudo apt-get remove debian-reference-it -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo "Remove junk audio"
+	echo
 	sudo apt-get remove brasero-common -y
 	sudo apt-get remove brasero -y
 	sudo apt-get remove cheese -y
@@ -98,9 +104,11 @@ echo "Remove junk audio"
 	sudo apt-get remove sound-juicer -y
 	sudo apt-get remove totem -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo "Remove junk games"
+	echo
 	sudo apt-get remove aisleriot -y
 	sudo apt-get remove five-or-more -y
 	sudo apt-get remove four-in-a-row -y
@@ -121,16 +129,23 @@ echo "Remove junk games"
 	sudo apt-get remove swell-foop -y
 	sudo apt-get remove tali -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-	echo "Remove junk graphics"
+echo "Remove junk graphics"
+	echo
 	sudo apt-get remove eog -y
 	sudo apt-get remove shotwell -y
 	sudo apt-get remove simple-scan -y
+	sudo apt-get remove gimp-help-sv -y
+	sudo apt-get remove gimp-help-common -y
+	## NOT INSTALLED sudo apt-get remove gimp -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo "Remove junk internet"
+	echo
 	sudo apt-get remove deluge-common -y
 	sudo apt-get remove deluge-gtk -y
 	sudo apt-get remove deluge -y
@@ -140,26 +155,30 @@ echo "Remove junk internet"
 	sudo apt-get remove thunderbird -y
 	sudo apt-get remove transmission-gtk -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo "Remove junk Office"
+	echo
 	echo Nothing to remove in Debian 12.X here.
+	#sudo apt-get remove evince-common -y	## Possible remove, or use remove zzz evince.sh
+	#sudo apt-get remove evince -y		## Possible remove, or use remove zzz evince.sh
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo "Remove junk preferences"
+	echo
 	sudo apt-get remove anthy -y
 	sudo apt-get remove kasumi -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo "Remove junk system"
+	echo
 	killall -9 uim
-	sudo apt-get remove aspell -y
 	sudo apt-get remove eject -y
-	sudo apt-get remove hunspell -y
-	#sudo apt-get remove ibus-clutter -y	## problem in terminal if removed
-	#sudo apt-get remove ibus -y		## problem in terminal if removed
 	sudo apt-get remove id3 -y		## command line id3 tag
 	sudo apt-get remove im-config -y
 	sudo apt-get remove mdadm -y		## raid software
@@ -172,6 +191,8 @@ echo "Remove junk system"
 	sudo apt-get remove vino -y
 	sudo apt-get remove yelp-xsl -y
 	sudo apt-get remove yelp -y
+	#sudo apt-get remove ibus-clutter -y	## problem in terminal if removed
+	#sudo apt-get remove ibus -y		## problem in terminal if removed
 	sudo dpkg -r --force-depends fcitx5-chewing
 	sudo dpkg -r --force-depends fcitx5-chinese-addons
 	sudo dpkg -r --force-depends fcitx5-chinese-addons-bin
@@ -198,7 +219,7 @@ echo "Remove junk system"
 	sudo dpkg -r --force-depends libfcitx5core7
 	sudo dpkg -r --force-depends libfcitx5-qt1
 	sudo dpkg -r --force-depends libfcitx5-qt-data
-	sudo dpkg -r --force-depends libfcitx5utils2
+	#sudo dpkg -r --force-depends libfcitx5utils2		## error if removed
 	sudo dpkg -r --force-depends libfcitx-config4
 	sudo dpkg -r --force-depends libfcitx-qt5-1
 	sudo dpkg -r --force-depends libfcitx-qt5-data
@@ -206,10 +227,20 @@ echo "Remove junk system"
 	sudo dpkg -r --force-depends fcitx-config-gtk
 	sudo dpkg -r --force-depends libfcitx-core0
 	sudo dpkg -r --force-depends libfcitx-gclient1
+	sudo dpkg -r --force-depends fcitx-config-common
+	sudo dpkg -r --force-depends fcitx-frontend-gtk2
+	sudo dpkg -r --force-depends fcitx-frontend-gtk3
+	sudo dpkg -r --force-depends fcitx-frontend-qt5
+	sudo dpkg -r --force-depends fcitx-module-dbus
+	sudo dpkg -r --force-depends fcitx-module-kimpanel
+	sudo dpkg -r --force-depends fcitx5-data
+	sudo dpkg -r --force-depends fcitx5-modules
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
 echo "Remove junk administration"
+	echo
 	sudo apt-get remove gnome-logs -y
 	sudo apt-get remove gnome-software -y
 	sudo apt-get remove malcontent -y
@@ -219,18 +250,22 @@ echo "Remove junk administration"
 	sudo apt-get remove xiterm+thai -y
 	sudo apt-get remove xterm -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-echo Finish removing applications.
+echo "Finish removing applications."
 
 	echo
-	echo "${yellow}	████████████████ REMOVE APP FINISH ████████████████ ${reset}"
+	echo "${blue}	████████████████ REMOVE APP FINISH ████████████████ ${reset}"
 	echo
+	sleep 3
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-echo autoremove unused associated files.
-	echo "Will now run apt-get autoremove -y to remove associated files."
+echo "Will now run apt-get autoremove -y to remove associated files."
+	echo
+	echo   "${blue}	████████████████ START ████████████████ ${reset}"
+	echo
 	sudo apt-get autoremove -y
 
 	echo

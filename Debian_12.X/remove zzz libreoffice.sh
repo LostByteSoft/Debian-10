@@ -61,165 +61,152 @@ echo -------------------------========================-------------------------
 	echo 2025-02-20-12-31-03
 	echo
 echo -------------------------========================-------------------------
-echo "https://techpiezo.com/linux/remove-a-package-without-removing-its-dependencies-in-ubuntu/"
+echo "Remove LibreOffice"
+	echo
 
-## For debian 12
+	sudo dpkg -r --force-depends fonts-opensymbol
+	sudo dpkg -r --force-depends libreoffice-base-core
+	sudo dpkg -r --force-depends libreoffice-calc
+	sudo dpkg -r --force-depends libreoffice-common
+	sudo dpkg -r --force-depends libreoffice-core
+	sudo dpkg -r --force-depends libreoffice-draw
+	sudo dpkg -r --force-depends libreoffice-gnome
+	sudo dpkg -r --force-depends libreoffice-gtk3
+	sudo dpkg -r --force-depends libreoffice-help-ca
+	sudo dpkg -r --force-depends libreoffice-help-common
+	sudo dpkg -r --force-depends libreoffice-help-cs
+	sudo dpkg -r --force-depends libreoffice-help-da
+	sudo dpkg -r --force-depends libreoffice-help-de
+	sudo dpkg -r --force-depends libreoffice-help-dz
+	sudo dpkg -r --force-depends libreoffice-help-el
+	sudo dpkg -r --force-depends libreoffice-help-en-gb
+	sudo dpkg -r --force-depends libreoffice-help-es
+	sudo dpkg -r --force-depends libreoffice-help-et
+	sudo dpkg -r --force-depends libreoffice-help-eu
+	sudo dpkg -r --force-depends libreoffice-help-fi
+	sudo dpkg -r --force-depends libreoffice-help-fr
+	sudo dpkg -r --force-depends libreoffice-help-gl
+	sudo dpkg -r --force-depends libreoffice-help-hi
+	sudo dpkg -r --force-depends libreoffice-help-hu
+	sudo dpkg -r --force-depends libreoffice-help-it
+	sudo dpkg -r --force-depends libreoffice-help-ja
+	sudo dpkg -r --force-depends libreoffice-help-km
+	sudo dpkg -r --force-depends libreoffice-help-ko
+	sudo dpkg -r --force-depends libreoffice-help-nl
+	sudo dpkg -r --force-depends libreoffice-help-pl
+	sudo dpkg -r --force-depends libreoffice-help-pt
+	sudo dpkg -r --force-depends libreoffice-help-ru
+	sudo dpkg -r --force-depends libreoffice-help-sk
+	sudo dpkg -r --force-depends libreoffice-help-sl
+	sudo dpkg -r --force-depends libreoffice-help-sv
+	sudo dpkg -r --force-depends libreoffice-help-zh-cn
+	sudo dpkg -r --force-depends libreoffice-help-zh-tw
+	sudo dpkg -r --force-depends libreoffice-impress
+	sudo dpkg -r --force-depends libreoffice-l10n-ar
+	sudo dpkg -r --force-depends libreoffice-l10n-ast
+	sudo dpkg -r --force-depends libreoffice-l10n-be
+	sudo dpkg -r --force-depends libreoffice-l10n-bg
+	sudo dpkg -r --force-depends libreoffice-l10n-bn
+	sudo dpkg -r --force-depends libreoffice-l10n-bs
+	sudo dpkg -r --force-depends libreoffice-l10n-ca
+	sudo dpkg -r --force-depends libreoffice-l10n-cs
+	sudo dpkg -r --force-depends libreoffice-l10n-cy
+	sudo dpkg -r --force-depends libreoffice-l10n-da
+	sudo dpkg -r --force-depends libreoffice-l10n-de
+	sudo dpkg -r --force-depends libreoffice-l10n-dz
+	sudo dpkg -r --force-depends libreoffice-l10n-el
+	sudo dpkg -r --force-depends libreoffice-l10n-en-gb
+	sudo dpkg -r --force-depends libreoffice-l10n-en-za
+	sudo dpkg -r --force-depends libreoffice-l10n-eo
+	sudo dpkg -r --force-depends libreoffice-l10n-es
+	sudo dpkg -r --force-depends libreoffice-l10n-et
+	sudo dpkg -r --force-depends libreoffice-l10n-eu
+	sudo dpkg -r --force-depends libreoffice-l10n-fa
+	sudo dpkg -r --force-depends libreoffice-l10n-fi
+	sudo dpkg -r --force-depends libreoffice-l10n-fr
+	sudo dpkg -r --force-depends libreoffice-l10n-ga
+	sudo dpkg -r --force-depends libreoffice-l10n-gl
+	sudo dpkg -r --force-depends libreoffice-l10n-gu
+	sudo dpkg -r --force-depends libreoffice-l10n-he
+	sudo dpkg -r --force-depends libreoffice-l10n-hi
+	sudo dpkg -r --force-depends libreoffice-l10n-hr
+	sudo dpkg -r --force-depends libreoffice-l10n-hu
+	sudo dpkg -r --force-depends libreoffice-l10n-id
+	sudo dpkg -r --force-depends libreoffice-l10n-is
+	sudo dpkg -r --force-depends libreoffice-l10n-it
+	sudo dpkg -r --force-depends libreoffice-l10n-ja
+	sudo dpkg -r --force-depends libreoffice-l10n-ka
+	sudo dpkg -r --force-depends libreoffice-l10n-km
+	sudo dpkg -r --force-depends libreoffice-l10n-ko
+	sudo dpkg -r --force-depends libreoffice-l10n-lt
+	sudo dpkg -r --force-depends libreoffice-l10n-lv
+	sudo dpkg -r --force-depends libreoffice-l10n-mk
+	sudo dpkg -r --force-depends libreoffice-l10n-ml
+	sudo dpkg -r --force-depends libreoffice-l10n-mr
+	sudo dpkg -r --force-depends libreoffice-l10n-nb
+	sudo dpkg -r --force-depends libreoffice-l10n-ne
+	sudo dpkg -r --force-depends libreoffice-l10n-nl
+	sudo dpkg -r --force-depends libreoffice-l10n-nn
+	sudo dpkg -r --force-depends libreoffice-l10n-pa-in
+	sudo dpkg -r --force-depends libreoffice-l10n-pl
+	sudo dpkg -r --force-depends libreoffice-l10n-pt
+	sudo dpkg -r --force-depends libreoffice-l10n-pt-br
+	sudo dpkg -r --force-depends libreoffice-l10n-ro
+	sudo dpkg -r --force-depends libreoffice-l10n-ru
+	sudo dpkg -r --force-depends libreoffice-l10n-si
+	sudo dpkg -r --force-depends libreoffice-l10n-sk
+	sudo dpkg -r --force-depends libreoffice-l10n-sl
+	sudo dpkg -r --force-depends libreoffice-l10n-sr
+	sudo dpkg -r --force-depends libreoffice-l10n-sv
+	sudo dpkg -r --force-depends libreoffice-l10n-ta
+	sudo dpkg -r --force-depends libreoffice-l10n-te
+	sudo dpkg -r --force-depends libreoffice-l10n-th
+	sudo dpkg -r --force-depends libreoffice-l10n-tr
+	sudo dpkg -r --force-depends libreoffice-l10n-ug
+	sudo dpkg -r --force-depends libreoffice-l10n-uk
+	sudo dpkg -r --force-depends libreoffice-l10n-vi
+	sudo dpkg -r --force-depends libreoffice-l10n-xh
+	sudo dpkg -r --force-depends libreoffice-l10n-zh-cn
+	sudo dpkg -r --force-depends libreoffice-l10n-zh-tw
+	sudo dpkg -r --force-depends libreoffice-math
+	sudo dpkg -r --force-depends libreoffice-style-colibre
+	sudo dpkg -r --force-depends libreoffice-style-elementary
+	sudo dpkg -r --force-depends libreoffice-voikko
+	sudo dpkg -r --force-depends libreoffice-writer
+	sudo dpkg -r --force-depends libuno-cppu3
+	sudo dpkg -r --force-depends libuno-cppuhelpergcc3-3
+	sudo dpkg -r --force-depends libuno-purpenvhelpergcc3-3
+	sudo dpkg -r --force-depends libuno-sal3
+	sudo dpkg -r --force-depends libuno-salhelpergcc3-3
+	sudo dpkg -r --force-depends myspell-he
+	sudo dpkg -r --force-depends mythes-cs
+	sudo dpkg -r --force-depends mythes-de
+	sudo dpkg -r --force-depends mythes-de-ch
+	sudo dpkg -r --force-depends mythes-fr
+	sudo dpkg -r --force-depends mythes-it
+	sudo dpkg -r --force-depends mythes-ne
+	sudo dpkg -r --force-depends mythes-pl
+	sudo dpkg -r --force-depends mythes-ru
+	sudo dpkg -r --force-depends mythes-sk
+	sudo dpkg -r --force-depends python3-uno
+	sudo dpkg -r --force-depends uno-libs-private
+	sudo dpkg -r --force-depends ure
 
-sudo dpkg -r --force-depends fonts-opensymbol
-sudo dpkg -r --force-depends libreoffice-base-core
-sudo dpkg -r --force-depends libreoffice-calc
-sudo dpkg -r --force-depends libreoffice-common
-sudo dpkg -r --force-depends libreoffice-core
-sudo dpkg -r --force-depends libreoffice-draw
-sudo dpkg -r --force-depends libreoffice-gnome
-sudo dpkg -r --force-depends libreoffice-gtk3
-sudo dpkg -r --force-depends libreoffice-help-ca
-sudo dpkg -r --force-depends libreoffice-help-common
-sudo dpkg -r --force-depends libreoffice-help-cs
-sudo dpkg -r --force-depends libreoffice-help-da
-sudo dpkg -r --force-depends libreoffice-help-de
-sudo dpkg -r --force-depends libreoffice-help-dz
-sudo dpkg -r --force-depends libreoffice-help-el
-sudo dpkg -r --force-depends libreoffice-help-en-gb
-sudo dpkg -r --force-depends libreoffice-help-es
-sudo dpkg -r --force-depends libreoffice-help-et
-sudo dpkg -r --force-depends libreoffice-help-eu
-sudo dpkg -r --force-depends libreoffice-help-fi
-sudo dpkg -r --force-depends libreoffice-help-fr
-sudo dpkg -r --force-depends libreoffice-help-gl
-sudo dpkg -r --force-depends libreoffice-help-hi
-sudo dpkg -r --force-depends libreoffice-help-hu
-sudo dpkg -r --force-depends libreoffice-help-it
-sudo dpkg -r --force-depends libreoffice-help-ja
-sudo dpkg -r --force-depends libreoffice-help-km
-sudo dpkg -r --force-depends libreoffice-help-ko
-sudo dpkg -r --force-depends libreoffice-help-nl
-sudo dpkg -r --force-depends libreoffice-help-pl
-sudo dpkg -r --force-depends libreoffice-help-pt
-sudo dpkg -r --force-depends libreoffice-help-ru
-sudo dpkg -r --force-depends libreoffice-help-sk
-sudo dpkg -r --force-depends libreoffice-help-sl
-sudo dpkg -r --force-depends libreoffice-help-sv
-sudo dpkg -r --force-depends libreoffice-help-zh-cn
-sudo dpkg -r --force-depends libreoffice-help-zh-tw
-sudo dpkg -r --force-depends libreoffice-impress
-sudo dpkg -r --force-depends libreoffice-l10n-ar
-sudo dpkg -r --force-depends libreoffice-l10n-ast
-sudo dpkg -r --force-depends libreoffice-l10n-be
-sudo dpkg -r --force-depends libreoffice-l10n-bg
-sudo dpkg -r --force-depends libreoffice-l10n-bn
-sudo dpkg -r --force-depends libreoffice-l10n-bs
-sudo dpkg -r --force-depends libreoffice-l10n-ca
-sudo dpkg -r --force-depends libreoffice-l10n-cs
-sudo dpkg -r --force-depends libreoffice-l10n-cy
-sudo dpkg -r --force-depends libreoffice-l10n-da
-sudo dpkg -r --force-depends libreoffice-l10n-de
-sudo dpkg -r --force-depends libreoffice-l10n-dz
-sudo dpkg -r --force-depends libreoffice-l10n-el
-sudo dpkg -r --force-depends libreoffice-l10n-en-gb
-sudo dpkg -r --force-depends libreoffice-l10n-en-za
-sudo dpkg -r --force-depends libreoffice-l10n-eo
-sudo dpkg -r --force-depends libreoffice-l10n-es
-sudo dpkg -r --force-depends libreoffice-l10n-et
-sudo dpkg -r --force-depends libreoffice-l10n-eu
-sudo dpkg -r --force-depends libreoffice-l10n-fa
-sudo dpkg -r --force-depends libreoffice-l10n-fi
-sudo dpkg -r --force-depends libreoffice-l10n-fr
-sudo dpkg -r --force-depends libreoffice-l10n-ga
-sudo dpkg -r --force-depends libreoffice-l10n-gl
-sudo dpkg -r --force-depends libreoffice-l10n-gu
-sudo dpkg -r --force-depends libreoffice-l10n-he
-sudo dpkg -r --force-depends libreoffice-l10n-hi
-sudo dpkg -r --force-depends libreoffice-l10n-hr
-sudo dpkg -r --force-depends libreoffice-l10n-hu
-sudo dpkg -r --force-depends libreoffice-l10n-id
-sudo dpkg -r --force-depends libreoffice-l10n-is
-sudo dpkg -r --force-depends libreoffice-l10n-it
-sudo dpkg -r --force-depends libreoffice-l10n-ja
-sudo dpkg -r --force-depends libreoffice-l10n-ka
-sudo dpkg -r --force-depends libreoffice-l10n-km
-sudo dpkg -r --force-depends libreoffice-l10n-ko
-sudo dpkg -r --force-depends libreoffice-l10n-lt
-sudo dpkg -r --force-depends libreoffice-l10n-lv
-sudo dpkg -r --force-depends libreoffice-l10n-mk
-sudo dpkg -r --force-depends libreoffice-l10n-ml
-sudo dpkg -r --force-depends libreoffice-l10n-mr
-sudo dpkg -r --force-depends libreoffice-l10n-nb
-sudo dpkg -r --force-depends libreoffice-l10n-ne
-sudo dpkg -r --force-depends libreoffice-l10n-nl
-sudo dpkg -r --force-depends libreoffice-l10n-nn
-sudo dpkg -r --force-depends libreoffice-l10n-pa-in
-sudo dpkg -r --force-depends libreoffice-l10n-pl
-sudo dpkg -r --force-depends libreoffice-l10n-pt
-sudo dpkg -r --force-depends libreoffice-l10n-pt-br
-sudo dpkg -r --force-depends libreoffice-l10n-ro
-sudo dpkg -r --force-depends libreoffice-l10n-ru
-sudo dpkg -r --force-depends libreoffice-l10n-si
-sudo dpkg -r --force-depends libreoffice-l10n-sk
-sudo dpkg -r --force-depends libreoffice-l10n-sl
-sudo dpkg -r --force-depends libreoffice-l10n-sr
-sudo dpkg -r --force-depends libreoffice-l10n-sv
-sudo dpkg -r --force-depends libreoffice-l10n-ta
-sudo dpkg -r --force-depends libreoffice-l10n-te
-sudo dpkg -r --force-depends libreoffice-l10n-th
-sudo dpkg -r --force-depends libreoffice-l10n-tr
-sudo dpkg -r --force-depends libreoffice-l10n-ug
-sudo dpkg -r --force-depends libreoffice-l10n-uk
-sudo dpkg -r --force-depends libreoffice-l10n-vi
-sudo dpkg -r --force-depends libreoffice-l10n-xh
-sudo dpkg -r --force-depends libreoffice-l10n-zh-cn
-sudo dpkg -r --force-depends libreoffice-l10n-zh-tw
-sudo dpkg -r --force-depends libreoffice-math
-sudo dpkg -r --force-depends libreoffice-style-colibre
-sudo dpkg -r --force-depends libreoffice-style-elementary
-sudo dpkg -r --force-depends libreoffice-voikko
-sudo dpkg -r --force-depends libreoffice-writer
-sudo dpkg -r --force-depends libuno-cppu3
-sudo dpkg -r --force-depends libuno-cppuhelpergcc3-3
-sudo dpkg -r --force-depends libuno-purpenvhelpergcc3-3
-sudo dpkg -r --force-depends libuno-sal3
-sudo dpkg -r --force-depends libuno-salhelpergcc3-3
-sudo dpkg -r --force-depends myspell-he
-sudo dpkg -r --force-depends mythes-cs
-sudo dpkg -r --force-depends mythes-de
-sudo dpkg -r --force-depends mythes-de-ch
-sudo dpkg -r --force-depends mythes-fr
-sudo dpkg -r --force-depends mythes-it
-sudo dpkg -r --force-depends mythes-ne
-sudo dpkg -r --force-depends mythes-pl
-sudo dpkg -r --force-depends mythes-ru
-sudo dpkg -r --force-depends mythes-sk
-sudo dpkg -r --force-depends python3-uno
-sudo dpkg -r --force-depends uno-libs-private
-sudo dpkg -r --force-depends ure
+echo
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Will now run apt-get autoremove -y to remove associated files."
+	echo
+	echo   "${blue}	████████████████ START ████████████████ ${reset}"
+	echo
+	sudo apt-get autoremove -y
 
-echo -------------------------========================-------------------------
-
-sudo apt-get autoremove -y
+	echo
+	echo  "${green}	████████████████ ALL OK / ALL REMOVED ████████████████ ${reset}"
+	echo
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-echo "Software lead out."
-	printf '\033[8;26;102t'		## minimum of ? for graphics, will resize the window, if needed.
-	echo
-	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random"
-	echo "Debug data : random2=$random2 automatic=$automatic primeerror=$primeerror id=$id"
-	echo
-	echo "Finish... with numbers of actions : $part"
-	echo "This script take $(( SECONDS - start )) seconds to complete."
-	date=$(date -d@$(( SECONDS - start )) -u +%H:%M:%S)
-	echo "Time needed: $date"
-	now=$(date +"%Y-%m-%d_%A_%I:%M:%S")
-	echo "Current time : $now"
-	echo
-	echo "$now (Time now)" >>/dev/shm/logs.txt
-	echo "	Time needed : $date" >>/dev/shm/logs.txt
-	echo "	Name of software : $me" >>/dev/shm/logs.txt
-	echo "	Debug data : debug=$debug debugcore=$debugcore error=$error part=$part noquit=$noquit random=$random random2=$random2 automatic=$automatic primeerror=$primeerror id=$id" >>/dev/shm/logs.txt
-	echo "	File (If any used) : $file" >>/dev/shm/logs.txt
-	echo " " >>/dev/shm/logs.txt
-
-echo -------------------------===== End of Bash ======-------------------------
 ## Exit, wait or auto-quit.
 ## Simple function small bar to wait 3 sec.
 	## Version 1.04
@@ -257,6 +244,29 @@ echo -------------------------===== End of Bash ======-------------------------
 		}
 
 ##-------------------------=========== SEPARATOR =============-------------------------
+echo "Software lead out."
+	printf '\033[8;26;102t'		## minimum of ? for graphics, will resize the window, if needed.
+	echo
+	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random"
+	echo "Debug data : random2=$random2 automatic=$automatic primeerror=$primeerror id=$id"
+	echo
+	echo "Finish... with numbers of actions : $part"
+	echo "This script take $(( SECONDS - start )) seconds to complete."
+	date=$(date -d@$(( SECONDS - start )) -u +%H:%M:%S)
+	echo "Time needed: $date"
+	now=$(date +"%Y-%m-%d_%A_%I:%M:%S")
+	echo "Current time : $now"
+	echo
+	echo "$now (Time now)" >>/dev/shm/logs.txt
+	echo "	Time needed : $date" >>/dev/shm/logs.txt
+	echo "	Name of software : $me" >>/dev/shm/logs.txt
+	echo "	Debug data : debug=$debug debugcore=$debugcore error=$error part=$part noquit=$noquit random=$random random2=$random2 automatic=$automatic primeerror=$primeerror id=$id" >>/dev/shm/logs.txt
+	echo "	File (If any used) : $file" >>/dev/shm/logs.txt
+	echo " " >>/dev/shm/logs.txt
+
+echo -------------------------===== End of Bash ======-------------------------
+## Exit, wait or auto-quit.
+
 	if [ "$primeerror" -ge "1" ]; then
 		echo
 		echo "	${red}████████████████████████████████████████████${reset}"
@@ -267,7 +277,7 @@ echo -------------------------===== End of Bash ======-------------------------
 		echo
 		echo "Numbers of error(s) : $primeerror"
 		echo
-		echo "$id - RUNNING : $me"
+		echo "Pid : $id - RUNNING : $me"
 		echo
 		debug
 		#functionsmallbar

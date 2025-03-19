@@ -61,39 +61,31 @@ echo -------------------------========================-------------------------
 	echo 2025-02-20-12-31-07
 	echo
 echo -------------------------========================-------------------------
+echo "Remove rhythmbox"
+	echo
 
-echo "https://techpiezo.com/linux/remove-a-package-without-removing-its-dependencies-in-ubuntu/"
+	sudo dpkg -r --force-depends librhythmbox-core10
+	sudo dpkg -r --force-depends rhythmbox-data
+	sudo dpkg -r --force-depends rhythmbox-plugin-cdrecorder
+	sudo dpkg -r --force-depends rhythmbox-plugins
+	sudo dpkg -r --force-depends rhythmbox
+	sudo dpkg -r --force-depends gir1.2-rb-3.0
 
-sudo dpkg -r --force-depends librhythmbox-core10
-sudo dpkg -r --force-depends rhythmbox-data
-sudo dpkg -r --force-depends rhythmbox-plugin-cdrecorder
-sudo dpkg -r --force-depends rhythmbox-plugins
-sudo dpkg -r --force-depends rhythmbox
-sudo dpkg -r --force-depends gir1.2-rb-3.0
+echo
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
+echo "Will now run apt-get autoremove -y to remove associated files."
+	echo
+	echo   "${blue}	████████████████ START ████████████████ ${reset}"
+	echo
+	sudo apt-get autoremove -y
+
+	echo
+	echo  "${green}	████████████████ ALL OK / ALL REMOVED ████████████████ ${reset}"
+	echo
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-echo "Software lead out."
-	printf '\033[8;26;102t'		## minimum of ? for graphics, will resize the window, if needed.
-	echo
-	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random"
-	echo "Debug data : random2=$random2 automatic=$automatic primeerror=$primeerror id=$id"
-	echo
-	echo "Finish... with numbers of actions : $part"
-	echo "This script take $(( SECONDS - start )) seconds to complete."
-	date=$(date -d@$(( SECONDS - start )) -u +%H:%M:%S)
-	echo "Time needed: $date"
-	now=$(date +"%Y-%m-%d_%A_%I:%M:%S")
-	echo "Current time : $now"
-	echo
-	echo "$now (Time now)" >>/dev/shm/logs.txt
-	echo "	Time needed : $date" >>/dev/shm/logs.txt
-	echo "	Name of software : $me" >>/dev/shm/logs.txt
-	echo "	Debug data : debug=$debug debugcore=$debugcore error=$error part=$part noquit=$noquit random=$random random2=$random2 automatic=$automatic primeerror=$primeerror id=$id" >>/dev/shm/logs.txt
-	echo "	File (If any used) : $file" >>/dev/shm/logs.txt
-	echo " " >>/dev/shm/logs.txt
-
-echo -------------------------===== End of Bash ======-------------------------
 ## Exit, wait or auto-quit.
 ## Simple function small bar to wait 3 sec.
 	## Version 1.04
@@ -131,6 +123,29 @@ echo -------------------------===== End of Bash ======-------------------------
 		}
 
 ##-------------------------=========== SEPARATOR =============-------------------------
+echo "Software lead out."
+	printf '\033[8;26;102t'		## minimum of ? for graphics, will resize the window, if needed.
+	echo
+	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random"
+	echo "Debug data : random2=$random2 automatic=$automatic primeerror=$primeerror id=$id"
+	echo
+	echo "Finish... with numbers of actions : $part"
+	echo "This script take $(( SECONDS - start )) seconds to complete."
+	date=$(date -d@$(( SECONDS - start )) -u +%H:%M:%S)
+	echo "Time needed: $date"
+	now=$(date +"%Y-%m-%d_%A_%I:%M:%S")
+	echo "Current time : $now"
+	echo
+	echo "$now (Time now)" >>/dev/shm/logs.txt
+	echo "	Time needed : $date" >>/dev/shm/logs.txt
+	echo "	Name of software : $me" >>/dev/shm/logs.txt
+	echo "	Debug data : debug=$debug debugcore=$debugcore error=$error part=$part noquit=$noquit random=$random random2=$random2 automatic=$automatic primeerror=$primeerror id=$id" >>/dev/shm/logs.txt
+	echo "	File (If any used) : $file" >>/dev/shm/logs.txt
+	echo " " >>/dev/shm/logs.txt
+
+echo -------------------------===== End of Bash ======-------------------------
+## Exit, wait or auto-quit.
+
 	if [ "$primeerror" -ge "1" ]; then
 		echo
 		echo "	${red}████████████████████████████████████████████${reset}"
@@ -141,7 +156,7 @@ echo -------------------------===== End of Bash ======-------------------------
 		echo
 		echo "Numbers of error(s) : $primeerror"
 		echo
-		echo "$id - RUNNING : $me"
+		echo "Pid : $id - RUNNING : $me"
 		echo
 		debug
 		#functionsmallbar
