@@ -29,6 +29,8 @@ The file to use is " remove ALL deb 1X.X excep zzz.sh ".
 
 Others remove files are for YOUR purpose if you really want to remove theses programs.
 
+This software is useful if you want to create a server and avoid unnecessary updates.
+
 Files included in folder.
 --------------------------------------------------------------------
 
