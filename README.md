@@ -8,7 +8,7 @@ Debian have some junk software installed by default.
 I use Debian:
 
 	debian-live-11.11.0-amd64-cinnamon.iso
-	debian-live-12.8.0-amd64-cinnamon.iso
+	debian-live-12.10.0-amd64-cinnamon.iso
 	debian-live-testing-amd64-cinnamon.iso
 
 
@@ -22,7 +22,10 @@ The file to use is " remove ALL deb 1X.X excep zzz.sh ".
 
 
 	-I update this file if i detect issues.
+	
+	THIS IS NOT AN AGRESSIVE REMOVE. ONLY REMOVES SOFTWARES WITH LITTLE USE.
 
+	ZZZ are more agressives.
 
 Others remove files are for YOUR purpose if you really want to remove theses programs.
 
