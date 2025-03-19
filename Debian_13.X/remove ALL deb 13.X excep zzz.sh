@@ -1,39 +1,36 @@
 #!/bin/bash
 #!/usr/bin/ffmpeg
 
-	printf '\033[8;40;110t'		# will resize the window.
+	printf '\033[8;30;100t'		# will resize the window.
 
 echo -------------------------===== Start of bash ====-------------------------
 
 	start=$SECONDS
-	now=$(date +"%Y-%m-%d_%A_%H:%M:%S")
-	
-	echo
-	echo
-	me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
-	echo "Running : $me"
-	
+	now=$(date +"%Y-%m-%d_%A_%H:%M:%S")	## time now
+	id=$(echo $PPID)			## current process id of the bash process
+
 	red=`tput setaf 1`
 	green=`tput setaf 2`
 	yellow=`tput setaf 11`
 	blue=`tput setaf 12`
-	orange=`tput setaf sgr9`
 	reset=`tput sgr0`
 
 	## General purposes variables. Needed before program to random variables.
 	## All variables must be 0
-	part=0		## don't change this value. (0)
-	debug=0		## test debug. (0 or 1 debug mode)
-	error=0		## test error. (0 or 1 make error)
-	primeerror=0	## ending error detector
+	part=0		## Don't change this value.
+	primeerror=0	## Ending error detector, do not change.
+	error=0		## Test error, do not change.
+	
 	## All variables must be 0 or 1
-	automatic=0	## automatic without (at least minimal) dialog box.
+	automatic=0	## automatic without (at least minimal) dialog box. (0 or 1)
+	debug=0		## test debug. (0 or 1 debug mode)
 	noquit=1	## noquit option. (0 or 1)
+	lowercase=0	## Change all to lowercase option. (0 or 1)
 
 	## Auto-generated variables. Do not change
 	random=$(shuf -i 4096-131072 -n 1)	# Used for temp folders. A big number hard to guess for security reasons.
 	random2=$RANDOM
-	
+
 	echo
 	echo "Software lead-in. LostByteSoft ; https://github.com/LostByteSoft"
 	echo
@@ -43,50 +40,88 @@ echo -------------------------===== Start of bash ====-------------------------
 	echo "Current time : $now"
 	echo
 	echo "Common variables, you can changes theses variables as you wish to test."
-	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 primeerror=$primeerror"
+	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 primeerror=$primeerror id=$id"
 	me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
 	echo
-	echo "Running job file :"
+	echo "Running job file : $me"
 	echo
-	echo $(dirname "$0")/$me
-	echo
-## Simple function small bar to wait 3 sec.
-	## Version 1.04
-	## https://github.com/LostByteSoft
-	## LostBytesSoft, lost byte softwares, because everything is ephemeral.
-	## Part of code came from here https://github.com/rabb1t/spinners , Created by Pavel Raykov aka 'rabbit' / 2018-11-08 (c)
-
-	functionsmallbar()
-		{
-		if [ "$debug" -eq 0 ]; then
-			#echo
-			width=40
-			perc=0
-			speed="0.1" # seconds
-			inc="$(echo "100/${width}" | bc -ql)"
-			#echo -n "	Wake Up.. 0% "
-			echo -n "	Wait... "
-
-			while [ $width -ge 0 ]; do
-				printf "\e[0;93;103m%s\e[0m %.0f%%" "0" "${perc}"
-				sleep $speed
-				let width--
-				perc="$(echo "${perc}+${inc}" | bc -ql)"
-		
-				if [ ${perc%%.*} -lt 10 ]; then
-					printf "\b\b\b"
-				else
-					printf "\b\b\b\b"
-				fi
-			done
-			echo
-		else
-			echo ${blue} ████████████████████ DEBUG BYPASS ALL BARS ████████████████████${reset}
-		fi
-		}
 
 ##-------------------------=========== SEPARATOR =============-------------------------
-echo -------------------------========================-------------------------
+## Simple function sleep bar to wait. Wait the time you specified in code.
+	## Version 1.26
+	## https://github.com/LostByteSoft
+	## LostBytesSoft, lost byte softwares, because everything is ephemeral.
+	## Replace the nothing show sleep with a better looking bar.
+	## SPECIFY A SLEEP TIME IN SECONDS BEFORE FUNCTION IN CODE. Default sleep is 3 second if not specified.
+
+	## In code exemple:
+	## sleep=3		## Use minimum 1 as a vriable.
+	## functionsleepbar
+
+	## Local var.
+	sleep=3
+	sleep1=0
+	sleep2=0
+
+functionsleepbar() {
+
+	if [ "$sleep" -ge "1" ]; then
+			sleep1=$(echo "scale=2 ; "$sleep"/20" | bc)
+			sleep2=$(echo "scale=2 ; "$sleep"/10" | bc)
+		else
+			sleep=3
+			sleep1=$(echo "scale=2 ; "$sleep"/20" | bc)
+			sleep2=$(echo "scale=2 ; "$sleep"/10" | bc)
+		fi
+
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|	|	|	|	|	|        (0%)\r"${reset}
+	sleep "$sleep2"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|██	|	|	|	|	|        (5%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|█████	|	|	|	|	|	(10%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|	|	|	|	|	(15%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|█	|	|	|	|	(20%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███	|	|	|	|	(25%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|█████	|	|	|	|	(30%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|	|	|	|	(35%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|█	|	|	|	(40%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|███	|	|	|	(45%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|█████	|	|	|	(50%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|███████|	|	|	(55%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|███████|█	|	|	(60%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|███████|███	|	|	(65%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|███████|█████	|	|	(70%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|███████|███████|	|	(75%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|███████|███████|█	|	(80%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|███████|███████|███	|	(90%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${blue}	|███████|███████|███████|███████|█████	|	(95%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne ${green}"Sleep time $sleep sec. ${green}	|███████|███████|███████|███████|███████|      (100%)\r"${reset}
+	sleep "$sleep1"
+	echo -ne '\n'
+	sleep=0
+	sleep1=0
+	sleep2=0
+	}
+
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
 	echo
 	echo  "${green}	████████████████     ALL OK / ACTIVE      ████████████████ ${reset}"
 	echo   "${blue}	████████████████      INFORMATION(S)      ████████████████ ${reset}"
@@ -95,7 +130,7 @@ echo -------------------------========================-------------------------
 	echo
 echo -------------------------========================-------------------------
 	echo Version compiled on : Also serves as a version
-	echo 2025-03-11
+	echo 2025-03-19-12-50-07
 	echo
 echo -------------------------========================-------------------------
 	echo
@@ -112,34 +147,39 @@ echo -------------------------========================-------------------------
 	echo
 echo -------------------------========================-------------------------
 
+	echo
 	echo   "${blue}	████████████████ START ████████████████ ${reset}"
+	echo
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-echo
-echo "Input password to continue or X to quit. Remove all junk ?"
-
 echo "Remove junk accessoires"
+	echo
 	sudo apt-get remove deja-dup -y
 	sudo apt-get remove goldendict -y
 	sudo apt-get remove gnote -y
 	sudo apt-get remove yelp -y
+	sudo apt-get remove debian-reference-common -y
+	sudo apt-get remove debian-reference-es -y
+	sudo apt-get remove debian-reference-it -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-
 echo "Remove junk audio"
+	echo
 	sudo apt-get remove totem -y
 	sudo apt-get remove brasero -y
 	sudo apt-get remove brasero-common -y
 	sudo apt-get remove cheese -y
 	sudo apt-get remove sound-juicer -y
 	sudo apt-get remove gnome-sound-recorder -y
-	
+
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-
 echo "Remove junk games"
+	echo
 	sudo apt-get remove gnome-robots -y
 	sudo apt-get remove gnome-chess -y
 	sudo apt-get remove aisleriot -y
@@ -160,20 +200,25 @@ echo "Remove junk games"
 	sudo apt-get remove swell-foop -y
 	sudo apt-get remove iagno -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-
 echo "Remove junk graphics"
-	sudo dpkg --purge --force-depends eog -y
+	echo
+
+	## This is a shitty fu** junk.
+	#sudo dpkg -r --force-depends remove eog	## Remove at the end ...
+
 	sudo apt-get remove simple-scan -y
 	sudo apt-get remove shotwell -y
 	sudo apt-get remove gimp-help-sv -y
 	sudo apt-get remove gimp-help-common -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-
 echo "Remove junk internet"
+	echo
 	sudo apt-get remove pidgin -y
 	sudo apt-get remove hexchat -y
 	sudo apt-get remove transmission-gtk -y
@@ -183,23 +228,28 @@ echo "Remove junk internet"
 	sudo apt-get remove deluge-gtk -y
 	sudo apt-get remove thunderbird -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-
 echo "Remove junk Office"
+	echo
 	echo Nothing to remove in Debian 13.0 here.
+	#sudo apt-get remove evince-common -y	## Possible remove, or use remove zzz evince.sh
+	#sudo apt-get remove evince -y		## Possible remove, or use remove zzz evince.sh
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-
 echo "Remove junk preferences"
+	echo
 	sudo apt-get remove anthy -y
 	sudo apt-get remove kasumi -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-
 echo "Remove junk system"
+	echo
 	killall -9 uim
 	sudo apt-get remove uim -y
 	sudo apt-get remove uim-data -y
@@ -215,10 +265,11 @@ echo "Remove junk system"
 	sudo apt-get remove id3 -y		## command line id3 tag
 	sudo apt-get remove mdadm -y		## raid software
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-
 echo "Remove junk administration"
+	echo
 	sudo apt-get remove gnome-software -y
 	sudo apt-get remove xterm -y
 	sudo apt-get remove mlterm-common -y
@@ -228,29 +279,35 @@ echo "Remove junk administration"
 	sudo apt-get remove malcontent -y
 	sudo apt-get remove gnome-logs -y
 
+echo
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-
 echo Finish removing applications.
 
 	echo
-	echo "${yellow}	████████████████ REMOVE APP FINISH ████████████████ ${reset}"
+	echo "${green}	████████████████ REMOVE APP FINISH ████████████████ ${reset}"
 	echo
+	sleep 3
 
 part=$((part+1))
 echo "-------------------------===== Section $part =====-------------------------"
-echo autoremove unused associated files.
-	echo "Will now run apt-get autoremove -y to remove associated files."
+echo "Will now run apt-get autoremove -y to remove associated files."
+	echo
+	echo   "${blue}	████████████████ START ████████████████ ${reset}"
+	echo
 	sudo apt-get autoremove -y
+
 	echo
 	echo  "${green}	████████████████ ALL OK / ALL REMOVED ████████████████ ${reset}"
 	echo
 
-echo -------------------------========================-------------------------
+part=$((part+1))
+echo "-------------------------===== Section $part =====-------------------------"
 echo "Software lead out."
-	printf '\033[8;50;107t'		# will resize the window, 96 is minimum for exit box.
+	printf '\033[8;26;102t'		## minimum of ? for graphics, will resize the window, if needed.
 	echo
-	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 primeerror=$primeerror"
+	echo "Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random"
+	echo "Debug data : random2=$random2 automatic=$automatic primeerror=$primeerror id=$id"
 	echo
 	echo "Finish... with numbers of actions : $part"
 	echo "This script take $(( SECONDS - start )) seconds to complete."
@@ -259,10 +316,10 @@ echo "Software lead out."
 	now=$(date +"%Y-%m-%d_%A_%I:%M:%S")
 	echo "Current time : $now"
 	echo
-	echo "$now" >>/dev/shm/logs.txt
+	echo "$now (Time now)" >>/dev/shm/logs.txt
 	echo "	Time needed : $date" >>/dev/shm/logs.txt
-	echo "	Debug software : $me" >>/dev/shm/logs.txt
-	echo "	Debug data : debug=$debug error=$error part=$part noquit=$noquit random=$random random2=$random2 automatic=$automatic primeerror=$primeerror" >>/dev/shm/logs.txt
+	echo "	Name of software : $me" >>/dev/shm/logs.txt
+	echo "	Debug data : debug=$debug debugcore=$debugcore error=$error part=$part noquit=$noquit random=$random random2=$random2 automatic=$automatic primeerror=$primeerror id=$id" >>/dev/shm/logs.txt
 	echo "	File (If any used) : $file" >>/dev/shm/logs.txt
 	echo " " >>/dev/shm/logs.txt
 
@@ -273,24 +330,26 @@ echo -------------------------===== End of Bash ======-------------------------
 		echo
 		echo "	${red}████████████████████████████████████████████${reset}"
 		echo "	${red}██                                        ██${reset}"
-		echo "	${red}██           ERROR ERROR ERROR            ██${reset}"
+		echo "	${red}██         Unknown entry event...         ██${reset}"
 		echo "	${red}██                                        ██${reset}"
 		echo "	${red}████████████████████████████████████████████${reset}"
 		echo
 		echo "Numbers of error(s) : $primeerror"
 		echo
-		functionsmallbar
+		echo "RUNNING : $me"
 		echo
-		read -n 1 -s -r -p "Press ENTER key to Continue !"
-		echo
+		debug
+		#functionsmallbar
+		noquit=1
 	else
 		echo
-		echo "	${green}████████████████████████████████████████${reset}	${blue}████████████████████████████████████████${reset}"
-		echo "	${green}██                                    ██${reset}	${blue}██                                    ██${reset}"
-		echo "	${green}██         NO errors detected.        ██${reset}	${blue}██       Time needed : $date       ██${reset}"
-		echo "	${green}██                                    ██${reset}	${blue}██                                    ██${reset}"
-		echo "	${green}████████████████████████████████████████${reset}	${blue}████████████████████████████████████████${reset}"
+		echo "${green}████████████████████████████████████████${reset}	${blue}████████████████████████████████████████${reset}"
+		echo "${green}██                                    ██${reset}	${blue}██                                    ██${reset}"
+		echo "${green}██         NO errors detected.        ██${reset}	${blue}██       Time needed : $date       ██${reset}"
+		echo "${green}██                                    ██${reset}	${blue}██                                    ██${reset}"
+		echo "${green}████████████████████████████████████████${reset}	${blue}████████████████████████████████████████${reset}"
 		echo
+		echo "RUNNING : $me"
 	fi
 
 	if [ "$noquit" -eq "1" ]; then
@@ -299,7 +358,6 @@ echo -------------------------===== End of Bash ======-------------------------
 		echo
 		read -n 1 -s -r -p "Press ENTER key to exit !"
 		echo
-		exit
 		fi
 
 	if [ "$debug" -eq "1" ]; then
@@ -314,7 +372,8 @@ echo -------------------------===== End of Bash ======-------------------------
 	echo "${green}	███████████████ Finish, quit in 3 seconds █████████████████${reset}"
 	sleep 0.5
 	echo
-	functionsmallbar
+	sleep=3
+	functionsleepbar
 	echo
 	sleep 1
 	exit
